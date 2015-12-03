@@ -297,7 +297,7 @@ ret_code AssumeDirective( int i, struct asm_tok tokenarray[] )
     for( i++; i < Token_Count; i++ ) {
 
         if( ( tokenarray[i].token == T_ID )
-            && (0 == _stricmp( tokenarray[i].string_ptr, szNothing )) ) {
+            && (0 == strcasecmp( tokenarray[i].string_ptr, szNothing )) ) {
             AssumeInit( -1 );
             i++;
             break;
@@ -339,7 +339,7 @@ ret_code AssumeDirective( int i, struct asm_tok tokenarray[] )
 
         /* check for ERROR and NOTHING */
 
-        if( 0 == _stricmp( tokenarray[i].string_ptr, szError )) {
+        if( 0 == strcasecmp( tokenarray[i].string_ptr, szError )) {
             if ( segtable ) {
                 info->is_flat = FALSE;
                 info->error = TRUE;
@@ -347,7 +347,7 @@ ret_code AssumeDirective( int i, struct asm_tok tokenarray[] )
                 info->error |= (( reg >= T_AH && reg <= T_BH ) ? RH_ERROR : ( flags & OP_R ));
             info->symbol = NULL;
             i++;
-        } else if( 0 == _stricmp( tokenarray[i].string_ptr, szNothing )) {
+        } else if( 0 == strcasecmp( tokenarray[i].string_ptr, szNothing )) {
             if ( segtable ) {
                 info->is_flat = FALSE;
                 info->error = FALSE;

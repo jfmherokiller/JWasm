@@ -721,7 +721,7 @@ int RunMacro( struct dsym *macro, int idx, struct asm_tok tokenarray[], char *ou
                                 DebugMsg1(("RunMacro(%s): GOTO, line=>%s<\n", macro->sym.name, ptr ));
                                 /* macro labels are always case-insensitive! */
                                 //if ( ( SymCmpFunc( ptr, tokenarray[1].string_ptr, len ) == 0 ) &&
-                                if ( ( _memicmp( ptr, tokenarray[1].string_ptr, len ) == 0 ) &&
+                                if ( ( strncasecmp( ptr, tokenarray[1].string_ptr, len ) == 0 ) &&
                                     ( is_valid_id_char(*(ptr+len) ) == FALSE ) ) {
                                     /* label found! */
                                     break;

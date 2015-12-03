@@ -121,7 +121,7 @@ char *token_stringbuf;  /* start token string buffer */
 #define INC_PATH_DELIM      ';'
 #define INC_PATH_DELIM_STR  ";"
 #define DIR_SEPARATOR       '\\'
-#define filecmp _stricmp
+#define filecmp strcasecmp
 #define ISPC( x ) ( x == '/' || x == '\\' || x == ':' )
 #define ISABS( x ) ( *x == '/' || *x == '\\' || ( *x &&  *(x+1) == ':' && ( *(x+2) == '/' || *(x+2) == '\\' ) ) )
 
@@ -845,8 +845,8 @@ struct asm_tok *PushInputStatus( struct input_status *oldstat )
     ModuleInfo.tokenarray += Token_Count + 1;
     CurrSource = GetAlignedPointer( CurrSource, strlen( CurrSource ) );
     /**/myassert( ( CurrSource + MAX_LINE_LEN ) <= (char *)ModuleInfo.tokenarray );
-    /**/myassert( ( ModuleInfo.tokenarray + sizeof( struct asm_tok ) * MAX_TOKEN ) <= end_tokenarray );
-    /**/myassert( ( token_stringbuf + 2 * MAX_LINE_LEN ) <= end_stringbuf );
+    ///**/myassert( ( ModuleInfo.tokenarray + sizeof( struct asm_tok ) * MAX_TOKEN ) <= end_tokenarray );
+    ///**/myassert( ( token_stringbuf + 2 * MAX_LINE_LEN ) <= end_stringbuf );
 #endif
     DebugMsg1(("PushInputStatus() stringbuf-tokencnt-currsrc old=%X-%u-%X new=%X-%X-%X\n",
                oldstat->token_stringbuf, oldstat->token_count, oldstat->currsource,

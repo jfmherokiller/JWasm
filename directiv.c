@@ -470,7 +470,7 @@ ret_code SegOrderDirective( int i, struct asm_tok tokenarray[] )
 #endif
        ) {
         if ( Parse_Pass == PASS_1 )
-            EmitWarn( 2, NOT_SUPPORTED_WITH_CURR_FORMAT, _strupr( tokenarray[i].string_ptr ) );
+            EmitWarn( 2, NOT_SUPPORTED_WITH_CURR_FORMAT, strupr( tokenarray[i].string_ptr ) );
     } else
 #endif
         ModuleInfo.segorder = GetSflagsSp( tokenarray[i].tokval );

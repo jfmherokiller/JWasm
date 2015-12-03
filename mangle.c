@@ -81,7 +81,7 @@ static int UCaseMangler( const struct asym *sym, char *buffer )
 /*************************************************************/
 {
     memcpy( buffer, sym->name, sym->name_size + 1 );
-    _strupr( buffer );
+    strupr( buffer );
     return( sym->name_size );
 }
 

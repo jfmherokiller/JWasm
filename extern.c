@@ -226,7 +226,7 @@ ret_code ExterndefDirective( int i, struct asm_tok tokenarray[] )
         ti.symtype = NULL;
         ti.Ofssize = ModuleInfo.Ofssize;
 
-        if ( tokenarray[i].token == T_ID && ( 0 == _stricmp( tokenarray[i].string_ptr, "ABS" ) ) ) {
+        if ( tokenarray[i].token == T_ID && ( 0 == strcasecmp( tokenarray[i].string_ptr, "ABS" ) ) ) {
             /* v2.07: MT_ABS is obsolete */
             //ti.mem_type = MT_ABS;
             i++;
@@ -554,7 +554,7 @@ ret_code ExternDirective( int i, struct asm_tok tokenarray[] )
         ti.symtype = NULL;
         ti.Ofssize = ModuleInfo.Ofssize;
 
-        if ( tokenarray[i].token == T_ID && ( 0 == _stricmp( tokenarray[i].string_ptr, "ABS" ) ) ) {
+        if ( tokenarray[i].token == T_ID && ( 0 == strcasecmp( tokenarray[i].string_ptr, "ABS" ) ) ) {
             //ti.mem_type = MT_ABS;
             i++;
         } else if ( tokenarray[i].token == T_DIRECTIVE && tokenarray[i].tokval == T_PROTO ) {

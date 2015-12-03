@@ -353,7 +353,7 @@ ret_code StoreMacro( struct dsym *macro, int i, struct asm_tok tokenarray[], boo
                     paranode->deflt = LclAlloc( tokenarray[i].stringlen + 1 );
                     memcpy( paranode->deflt, tokenarray[i].string_ptr, tokenarray[i].stringlen + 1 );
                     i++;
-                } else if( _stricmp( tokenarray[i].string_ptr, "REQ" ) == 0 ) {
+                } else if( strcasecmp( tokenarray[i].string_ptr, "REQ" ) == 0 ) {
                     /* required parameter */
                     paranode->required = TRUE;
                     i++;
@@ -378,7 +378,7 @@ ret_code StoreMacro( struct dsym *macro, int i, struct asm_tok tokenarray[], boo
                     i++;
 #endif
 #if VARARGML
-                } else if( _stricmp( tokenarray[i].string_ptr, "VARARGML" ) == 0 ) {
+                } else if( strcasecmp( tokenarray[i].string_ptr, "VARARGML" ) == 0 ) {
                     /* more parameters can follow, multi lines possible */
                     macro->sym.mac_vararg = TRUE;
                     macro->sym.mac_multiline = TRUE;

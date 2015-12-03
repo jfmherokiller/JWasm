@@ -10,7 +10,6 @@
 
 #include <ctype.h>
 #include <time.h>
-
 #include "globals.h"
 #include "memalloc.h"
 #include "input.h"
@@ -110,14 +109,14 @@ bool write_to_file;     /* write object module */
  * a local, simple version of _strupr() - it still wants to
  * import CharUpperA.
  */
-char * _strupr( char *src )
-{
-    char *dst;
-    for ( dst = src; *dst; dst++ )
-        if ( *dst >= 'a' && *dst <= 'z' )
-            *dst &= ~0x20;
-    return( src );
-}
+//char * _strupr( char *src )
+//{
+//    char *dst;
+//    for ( dst = src; *dst; dst++ )
+//        if ( *dst >= 'a' && *dst <= 'z' )
+//            *dst &= ~0x20;
+//    return( src );
+//}
 #endif
 
 #if COFF_SUPPORT || PE_SUPPORT
@@ -1076,7 +1075,7 @@ static void get_module_name( void )
         //_splitpath( CurrFName[ASM], NULL, NULL, ModuleInfo.name, dummy );
     }
 
-    _strupr( ModuleInfo.name );
+    strupr( ModuleInfo.name );
     /* the module name must be a valid identifier, because it's used
      * as part of a segment name in certain memory models.
      */

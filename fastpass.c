@@ -100,7 +100,7 @@ void StoreLine( const char *srcline, int flags, uint_32 lst_position )
 
     /* v2.08: don't store % operator at pos 0 */
     for ( p = LineStoreCurr->line; *p && isspace(*p); p++ );
-    if (*p == '%' && ( _memicmp( p+1, "OUT", 3 ) || is_valid_id_char( *(p+4) ) ) )
+    if (*p == '%' && ( strncasecmp( p+1, "OUT", 3 ) || is_valid_id_char( *(p+4) ) ) )
         *p = ' ';
 
 #ifdef DEBUG_OUT

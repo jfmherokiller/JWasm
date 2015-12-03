@@ -86,7 +86,7 @@ static int FindToken( const char *token, const char * const *table, int size )
 {
     int i;
     for( i = 0; i < size; i++, table++ ) {
-        if( _stricmp( *table, token ) == 0 ) {
+        if( strcasecmp( *table, token ) == 0 ) {
             return( i );
         }
     }

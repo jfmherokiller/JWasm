@@ -188,15 +188,15 @@ static enum c_bop GetCOp( struct asm_tok *item )
         size = strlen( p );
         if ( *(p+size-1) != '?' )
             return( COP_NONE );
-        if ( size == 5 && ( 0 == _memicmp( p, "ZERO", 4 ) ) )
+        if ( size == 5 && ( 0 == strncasecmp( p, "ZERO", 4 ) ) )
             rc = COP_ZERO;
-        else if ( size == 6 && ( 0 == _memicmp( p, "CARRY", 5 ) ) )
+        else if ( size == 6 && ( 0 == strncasecmp( p, "CARRY", 5 ) ) )
             rc = COP_CARRY;
-        else if ( size == 5 && ( 0 == _memicmp( p, "SIGN", 4 ) ) )
+        else if ( size == 5 && ( 0 == strncasecmp( p, "SIGN", 4 ) ) )
             rc = COP_SIGN;
-        else if ( size == 7 && ( 0 == _memicmp( p, "PARITY", 6 ) ) )
+        else if ( size == 7 && ( 0 == strncasecmp( p, "PARITY", 6 ) ) )
             rc = COP_PARITY;
-        else if ( size == 9 && ( 0 == _memicmp( p, "OVERFLOW", 8 ) ) )
+        else if ( size == 9 && ( 0 == strncasecmp( p, "OVERFLOW", 8 ) ) )
             rc = COP_OVERFLOW;
         else
             return( COP_NONE );
@@ -938,7 +938,7 @@ ret_code HllStartDir( int i, struct asm_tok tokenarray[] )
 
             /* create a jump to test label */
             /* optimisation: if line at 'test' label is just a jump, dont create label and don't jump! */
-            if ( _memicmp( buffer, "jmp", 3 ) ) {
+            if ( strncasecmp( buffer, "jmp", 3 ) ) {
                 hll->labels[LTEST] = GetHllLabel();
                 AddLineQueueX( JMPPREFIX "jmp %s", GetLabelStr( hll->labels[LTEST], buff ) );
             }

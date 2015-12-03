@@ -14,6 +14,8 @@
 #include "msgtext.h"
 #include "cmdline.h"
 #include "input.h" /* GetFNamePart() */
+#define WILDCARDS 0
+#define CATCHBREAK 0
 
 #if defined(__UNIX__) || defined(__CYGWIN__) || defined(__DJGPP__)
 
@@ -22,11 +24,11 @@
 
 #else
 
-#define WILDCARDS 1
+//#define WILDCARDS 1
 #ifdef __POCC__
-#define CATCHBREAK 0
+//#define CATCHBREAK 0
 #else
-#define CATCHBREAK 1
+//#define CATCHBREAK 1
 #endif
 
 #endif
@@ -36,7 +38,8 @@
  #ifdef __UNIX__
   #include <unistd.h>
  #else
-  #include <io.h>
+#include <unistd.h>
+#include <sys/io.h>
  #endif
 #endif
 

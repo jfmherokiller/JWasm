@@ -1459,7 +1459,7 @@ static ret_code coff_write_module( struct module_info *modinfo )
     coff_write_section_table( modinfo, &cm );
     coff_write_data( modinfo, &cm );
     /* v2.12: check that calculated sizes are identical to those that have been written */
-    /**/myassert( cm.start_symtab == ( cm.start_data + cm.size_data ) );
+    /**///myassert( cm.start_symtab == ( cm.start_data + cm.size_data ) );
 
     ifh.NumberOfSymbols = coff_write_symbols( modinfo, &cm );
     ifh.PointerToSymbolTable = ( ifh.NumberOfSymbols ? cm.start_data + cm.size_data : 0 );

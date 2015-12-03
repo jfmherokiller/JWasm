@@ -117,7 +117,7 @@ ret_code ContextDirective( int i, struct asm_tok tokenarray[] )
 
     while ( tokenarray[i].token == T_ID ) {
         for ( j = 0, type = -1; j < ( sizeof(typetab) / sizeof(typetab[0]) ); j++ ) {
-            if ( _stricmp( contextnames[j], tokenarray[i].string_ptr ) == 0 ) {
+            if ( strcasecmp( contextnames[j], tokenarray[i].string_ptr ) == 0 ) {
                 type = typetab[j];
                 break;
             }

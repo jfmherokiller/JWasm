@@ -63,8 +63,10 @@
 #if TRUNCATE
 #if defined(__UNIX__) || defined(__CYGWIN__) || defined(__DJGPP__)
 #include <unistd.h>
+
 #else
-#include <io.h>
+#include <sys/io.h>
+#include <unistd.h>
 #endif
 #endif
 

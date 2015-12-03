@@ -212,7 +212,7 @@ static bool check_dif( const char *string1, const char *string2, bool sensitive 
     if( sensitive ) {
         return( strcmp( string1, string2 ) != 0 );
     } else {
-        return( _stricmp( string1, string2 ) != 0 );
+        return( strcasecmp( string1, string2 ) != 0 );
     }
 }
 

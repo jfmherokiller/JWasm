@@ -31,12 +31,14 @@
 
 #ifndef _GLOBALS_H_INCLUDED
 #define _GLOBALS_H_INCLUDED
-
+#define __UNIX__
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <errno.h> /* needed for errno declaration ( "sometimes" it's defined in stdlib.h ) */
-
+#define _memicmp strncasecmp
+#define _stricmp strcasecmp
+#define _strupr strupr
 #if defined(__UNIX__) || defined(__CYGWIN__) || defined(__DJGPP__) /* avoid for MinGW! */
 
 extern char * strupr(char *);

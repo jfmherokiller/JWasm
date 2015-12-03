@@ -988,7 +988,7 @@ static ret_code invalid_operand( struct expr *opnd, char *oprtr, char *operand )
 /******************************************************************************/
 {
     if ( !opnd->is_opattr )
-        fnEmitErr( INVALID_OPERAND_FOR_OPERATOR, _strupr( oprtr), operand );
+        fnEmitErr( INVALID_OPERAND_FOR_OPERATOR, strupr( oprtr), operand );
     return( ERROR );
 }
 
