@@ -31,7 +31,7 @@
 //#include <stdarg.h>
 #include <stddef.h>
 #include <ctype.h>
-
+#include <emscripten.h>
 #include "globals.h"
 #include "memalloc.h"
 #include "parser.h"
