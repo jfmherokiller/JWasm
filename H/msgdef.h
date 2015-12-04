@@ -6,6 +6,7 @@
  * v2.06: Japanese texts removed.
  * v2.07: listing texts moved to ltext.h
  */
+
 pick( MSG_USAGE,              "usage: JWasm [ options ] filelist [@env_var]\n" "Run \"JWasm -?\" or \"JWasm -h\" for more info\n" )
 pick( MSG_ASSEMBLY_RESULTS,   "%s: %lu lines, %u passes, %u ms, %u warnings, %u errors" )
 pick( MSG_JWASM,              "JWasm v" _JWASM_VERSION_ ", " __DATE__ )
@@ -300,7 +301,7 @@ pick( TEXT_MACRO_USED_PRIOR_TO_DEFINITION, "Text macro used prior to definition:
 pick( OFFSET_SIZE_MISMATCH,              "Offset size incompatible with current segment" )
 pick( INSTRUCTION_FORM_REQUIRES_80386,   "Instruction form requires 80386" )
 pick( GROUP_SEGMENT_SIZE_CONFLICT,       "Group/Segment offset size conflict: %s - %s" )
-pick( ASSEMBLY_PASSES,                   "Assembly passes reached: %u" )
+pick( ASSEMBLY_PASSES ,                   "Assembly passes reached: %u" )
 pick( FILENAME_MUST_BE_ENCLOSED_IN_QUOTES_OR_BRACKETS, "Filename parameter must be enclosed in <> or quotes" )
 pick( START_ADDRESS_IGNORED,             "Start address on END directive ignored with .STARTUP" )
 pick( INVALID_SYMBOL_TYPE_IN_EXPRESSION, "Invalid symbol type in expression: %s" )
@@ -356,3 +357,4 @@ pick( ELSE_CLAUSE_ALREADY_OCCURED_IN_THIS_IF_BLOCK, "ELSE clause already occured
 pick( ILLEGAL_USE_OF_SEGMENT_REGISTER,   "Illegal use of segment register" )
 pick( GROUP_EXCEEDS_64K,                 "Group exceeds 64K: %s" )
 pick( EXPORT_MUST_BE_FAR,                "EXPORT must be FAR: %s" )
+

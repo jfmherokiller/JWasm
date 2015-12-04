@@ -13,7 +13,7 @@ option casemap :none   ; case sensitive
 .data
     tada db "Tada!", 0
     helloworld db "Hello World!", 0
- $
+ 
 .code
 Main proc
 ;    push MB_ICONINFORMATION     ; UINT uType
