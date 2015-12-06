@@ -57,9 +57,9 @@ enum fixup_types {
  * COFF: set bit 1, 4, 9, 10, 11
  *  ELF: set bit 8, 9, 10, 11
  */
-#if BIN_SUPPORT
+//#if BIN_SUPPORT
 #define BIN_DISALLOWED 0x0000
-#endif
+//#endif
 #define OMF_DISALLOWED 0x0000
 #if COFF_SUPPORT
 /* exclude RELOFF8, OFF8, PTR16, PTR32, HIBYTE */

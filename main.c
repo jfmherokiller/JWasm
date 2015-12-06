@@ -38,123 +38,124 @@
 
 #if WILDCARDS
 
- #ifdef __UNIX__
-  #include <unistd.h>
- #else
+#ifdef __UNIX__
+#include <unistd.h>
+#else
 #include <unistd.h>
 #include <sys/io.h>
- #endif
+#endif
 #endif
 
 #ifdef TRMEM
-void tm_Init( void );
-void tm_Fini( void );
+void tm_Init(void);
+void tm_Fini(void);
 #endif
 
-static void genfailure( int signo )
+static void genfailure(int signo)
 /*********************************/
 {
 #if CATCHBREAK
-    if (signo != SIGBREAK)
+	if (signo != SIGBREAK)
 #else
-    if (signo != SIGTERM)
+	if (signo != SIGTERM)
 #endif
-        EmitError( GENERAL_FAILURE );
-    close_files();
-    exit( EXIT_FAILURE );
+		EmitError(GENERAL_FAILURE);
+	close_files();
+	exit(EXIT_FAILURE);
 }
 
-int main( int argc, char **argv )
+int main(int argc, char **argv)
 /*******************************/
 {
 #if 0
-    EM_ASM(
-           var fs = require('fs');
-           FS.mkdir('/out');
-           FS.mount(NODEFS, { root: '.' }, '/out');
-           );
+	EM_ASM(
+		var fs = require('fs');
+	FS.mkdir('/out');
+	FS.mount(NODEFS, { root: '.' }, '/out');
+	);
 #endif
-    char    *pEnv;
-    int     numArgs = 0;
-    int     numFiles = 0;
-    int     rc = 0;
+	char    *pEnv;
+	int     numArgs = 0;
+	int     numFiles = 0;
+	int     rc = 0;
 #if WILDCARDS
-    /* v2.11: _findfirst/next/close() handle, should be of type intptr_t.
-     * since this type isn't necessarily defined, type long is used as substitute.
-     */
-    long    fh;
-    const char *pfn;
-    int     dirsize;
-    struct  _finddata_t finfo;
-    char    fname[FILENAME_MAX];
+	/* v2.11: _findfirst/next/close() handle, should be of type intptr_t.
+	 * since this type isn't necessarily defined, type long is used as substitute.
+	 */
+	long    fh;
+	const char *pfn;
+	int     dirsize;
+	struct  _finddata_t finfo;
+	char    fname[FILENAME_MAX];
 #endif
 
 #if 0 //def DEBUG_OUT    /* DebugMsg() cannot be used that early */
-    int i;
-    for ( i = 1; i < argc; i++ ) {
-        printf("argv[%u]=>%s<\n", i, argv[i] );
-    }
+	int i;
+	for (i = 1; i < argc; i++) {
+		printf("argv[%u]=>%s<\n", i, argv[i]);
+	}
 #endif
 
 #ifdef TRMEM
-    tm_Init();
+	tm_Init();
 #endif
 
-    pEnv = getenv( "JWASM" );
-    if ( pEnv == NULL )
-        pEnv = "";
-    argv[0] = pEnv;
+	pEnv = getenv("JWASM");
+	if (pEnv == NULL)
+		pEnv = "";
+	argv[0] = pEnv;
 
 #ifndef DEBUG_OUT
-    signal(SIGSEGV, genfailure);
+	signal(SIGSEGV, genfailure);
 #endif
 
 #if CATCHBREAK
-    signal(SIGBREAK, genfailure);
+	signal(SIGBREAK, genfailure);
 #else
-    signal(SIGTERM, genfailure);
+	signal(SIGTERM, genfailure);
 #endif
 
-    /* ParseCmdLine() returns NULL if no source file name has been found (anymore) */
-    while ( ParseCmdline( (const char **)argv, &numArgs ) ) {
-        numFiles++;
-        write_logo();
+	/* ParseCmdLine() returns NULL if no source file name has been found (anymore) */
+	while (ParseCmdline((const char **)argv, &numArgs)) {
+		numFiles++;
+		write_logo();
 #if WILDCARDS
-        if ((fh = _findfirst( Options.names[ASM], &finfo )) == -1 ) {
-            DebugMsg(("main: _findfirst(%s) failed\n", Options.names[ASM] ));
-            EmitErr( CANNOT_OPEN_FILE, Options.names[ASM], ErrnoStr() );
-            break;
-        }
-        /* v2.12: _splitpath()/_makepath() removed */
-        //_splitpath( Options.names[ASM], drv, dir, NULL, NULL );
-        //DebugMsg(("main: _splitpath(%s): drv=\"%s\" dir=\"%s\"\n", Options.names[ASM], drv, dir ));
-        pfn = GetFNamePart( Options.names[ASM] );
-        dirsize = pfn - Options.names[ASM];
-        memcpy( fname, Options.names[ASM], dirsize );
-        do {
-            /* v2.12: _splitpath()/_makepath() removed */
-            //_makepath( fname, drv, dir, finfo.name, NULL );
-            //DebugMsg(("main: _makepath(\"%s\", \"%s\", \"%s\")=\"%s\"\n", drv, dir, finfo.name, fname ));
-            strcpy( &fname[dirsize], finfo.name );
-            DebugMsg(("main: fname=%s\n", fname ));
-            rc = AssembleModule( fname );  /* assemble 1 module */
-        } while ( ( _findnext( fh, &finfo ) != -1 ) );
-        _findclose( fh );
+		if ((fh = _findfirst(Options.names[ASM], &finfo)) == -1) {
+			DebugMsg(("main: _findfirst(%s) failed\n", Options.names[ASM]));
+			EmitErr(CANNOT_OPEN_FILE, Options.names[ASM], ErrnoStr());
+			break;
+		}
+		/* v2.12: _splitpath()/_makepath() removed */
+		//_splitpath( Options.names[ASM], drv, dir, NULL, NULL );
+		//DebugMsg(("main: _splitpath(%s): drv=\"%s\" dir=\"%s\"\n", Options.names[ASM], drv, dir ));
+		pfn = GetFNamePart(Options.names[ASM]);
+		dirsize = pfn - Options.names[ASM];
+		memcpy(fname, Options.names[ASM], dirsize);
+		do {
+			/* v2.12: _splitpath()/_makepath() removed */
+			//_makepath( fname, drv, dir, finfo.name, NULL );
+			//DebugMsg(("main: _makepath(\"%s\", \"%s\", \"%s\")=\"%s\"\n", drv, dir, finfo.name, fname ));
+			strcpy(&fname[dirsize], finfo.name);
+			DebugMsg(("main: fname=%s\n", fname));
+			rc = AssembleModule(fname);  /* assemble 1 module */
+		} while ((_findnext(fh, &finfo) != -1));
+		_findclose(fh);
 #else
-        rc = AssembleModule( Options.names[ASM] );
+		rc = AssembleModule(Options.names[ASM]);
 #endif
-    };
-    CmdlineFini();
-    if ( numArgs == 0 ) {
-        write_logo();
-        printf( "%s", MsgGetEx( MSG_USAGE ) );
-    } else if ( numFiles == 0 )
-        EmitError( NO_FILENAME_SPECIFIED );
+	};
+	CmdlineFini();
+	if (numArgs == 0) {
+		write_logo();
+		printf("%s", MsgGetEx(MSG_USAGE));
+	}
+	else if (numFiles == 0)
+		EmitError(NO_FILENAME_SPECIFIED);
 
 #ifdef TRMEM
-    tm_Fini();
+	tm_Fini();
 #endif
 
-    DebugMsg(("main: exit, return code=%u\n", 1 - rc ));
-    return( 1 - rc ); /* zero if no errors */
+	DebugMsg(("main: exit, return code=%u\n", 1 - rc));
+	return(1 - rc); /* zero if no errors */
 }

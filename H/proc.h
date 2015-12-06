@@ -28,7 +28,6 @@
 *
 ****************************************************************************/
 
-
 #ifndef _PROC_H_
 #define _PROC_H_
 
@@ -39,10 +38,10 @@ extern struct asym     *sym_ReservedStack;  /* max stack space required by INVOK
 
 /* v2.11: proc status flags */
 enum proc_status {
-    PRST_INSIDE_PROLOGUE   = 0x01,
-    PRST_INSIDE_EPILOGUE   = 0x02,
-    PRST_FPO               = 0x04,
-    PRST_PROLOGUE_NOT_DONE = 0x80,
+	PRST_INSIDE_PROLOGUE = 0x01,
+	PRST_INSIDE_EPILOGUE = 0x02,
+	PRST_FPO = 0x04,
+	PRST_PROLOGUE_NOT_DONE = 0x80,
 };
 
 /*---------------------------------------------------------------------------*/
@@ -50,15 +49,15 @@ enum proc_status {
 //extern void             pushitem( void *, void * );
 //extern void             *popitem( void * );
 
-extern ret_code         ParseProc( struct dsym *, int, struct asm_tok[], bool, enum lang_type );
-extern struct asym      *CreateProc( struct asym *, const char *, enum sym_state );
-extern void             DeleteProc( struct dsym * );
+extern ret_code         ParseProc(struct dsym *, int, struct asm_tok[], bool, enum lang_type);
+extern struct asym      *CreateProc(struct asym *, const char *, enum sym_state);
+extern void             DeleteProc(struct dsym *);
 
-extern ret_code         CopyPrototype( struct dsym *, struct dsym * );
-extern ret_code         RetInstr( int, struct asm_tok[], int );   /* handle RET/IRET within procedures */
-extern void             write_prologue( struct asm_tok[] );
-extern void             ProcInit( void );
+extern ret_code         CopyPrototype(struct dsym *, struct dsym *);
+extern ret_code         RetInstr(int, struct asm_tok[], int);   /* handle RET/IRET within procedures */
+extern void             write_prologue(struct asm_tok[]);
+extern void             ProcInit(void);
 
-extern void             ProcCheckOpen( void );
+extern void             ProcCheckOpen(void);
 
 #endif
