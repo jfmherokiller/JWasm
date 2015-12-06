@@ -28,18 +28,18 @@
 *
 ****************************************************************************/
 
-#include "globals.h"
-#include "parser.h"
-#include "segment.h"
-#include "expreval.h"
-#include "types.h"
-#include "listing.h"
-#include "posndir.h"
-#include "fastpass.h"
-#include "fixup.h"
-#include "input.h"
+#include "H/globals.h"
+#include "H/parser.h"
+#include "H/segment.h"
+#include "H/expreval.h"
+#include "H/types.h"
+#include "H/listing.h"
+#include "H/posndir.h"
+#include "H/fastpass.h"
+#include "H/fixup.h"
+#include "H/input.h"
 
-#include "myassert.h"
+#include "H/myassert.h"
 
 static const uint_8 NopList16[] = {
     3,                  /* objlen of first NOP pattern */

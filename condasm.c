@@ -40,16 +40,16 @@
 
 #include <ctype.h>
 
-#include "globals.h"
-#include "parser.h"
-#include "condasm.h"
-#include "reswords.h"
-#include "expreval.h"
-#include "listing.h"
-#include "input.h"
-#include "macro.h"
-#include "types.h"
-#include "fastpass.h"
+#include "H/globals.h"
+#include "H/parser.h"
+#include "H/condasm.h"
+#include "H/reswords.h"
+#include "H/expreval.h"
+#include "H/listing.h"
+#include "H/input.h"
+#include "H/macro.h"
+#include "H/types.h"
+#include "H/fastpass.h"
 
 /*
  the current if-block can be in one of 3 states:

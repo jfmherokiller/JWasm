@@ -30,17 +30,17 @@
 
 #include <ctype.h>
 
-#include "globals.h"
-#include "memalloc.h"
-#include "parser.h"
-#include "condasm.h"
-#include "reswords.h"
-#include "input.h"
-#include "segment.h"
-#include "listing.h"
-#include "tokenize.h"
-#include "fastpass.h"
-#include "myassert.h"
+#include "H/globals.h"
+#include "H/memalloc.h"
+#include "H/parser.h"
+#include "H/condasm.h"
+#include "H/reswords.h"
+#include "H/input.h"
+#include "H/segment.h"
+#include "H/listing.h"
+#include "H/tokenize.h"
+#include "H/fastpass.h"
+#include "H/myassert.h"
 
 #define CONCATID 0 /* 0=most compatible (see backsl.asm) */
 #define MASMNUMBER 1 /* 1=Masm-compatible number scanning */

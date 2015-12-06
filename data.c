@@ -33,21 +33,21 @@
 
 #include <ctype.h>
 
-#include "globals.h"
-#include "memalloc.h"
-#include "parser.h"
-#include "expreval.h"
-#include "input.h"
-#include "fixup.h"
-#include "listing.h"
-#include "segment.h"
-#include "types.h"
-#include "fastpass.h"
-#include "tokenize.h"
-#include "macro.h"
-#include "omf.h"
-#include "atofloat.h"
-#include "myassert.h"
+#include "H/globals.h"
+#include "H/memalloc.h"
+#include "H/parser.h"
+#include "H/expreval.h"
+#include "H/input.h"
+#include "H/fixup.h"
+#include "H/listing.h"
+#include "H/segment.h"
+#include "H/types.h"
+#include "H/fastpass.h"
+#include "H/tokenize.h"
+#include "H/macro.h"
+#include "H/omf.h"
+#include "H/atofloat.h"
+#include "H/myassert.h"
 
 //#ifndef min
 //#define min(x,y) (((x) < (y)) ? (x) : (y))

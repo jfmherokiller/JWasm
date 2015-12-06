@@ -16,18 +16,18 @@
 
 #include <ctype.h>
 
-#include "globals.h"
-#include "memalloc.h"
-#include "parser.h"
-#include "equate.h"
-#include "label.h"
-#include "expreval.h"
-#include "types.h"
-#include "hll.h"
-#include "segment.h"
-#include "listing.h"
-#include "lqueue.h"
-#include "myassert.h"
+#include "H/globals.h"
+#include "H/memalloc.h"
+#include "H/parser.h"
+#include "H/equate.h"
+#include "H/label.h"
+#include "H/expreval.h"
+#include "H/types.h"
+#include "H/hll.h"
+#include "H/segment.h"
+#include "H/listing.h"
+#include "H/lqueue.h"
+#include "H/myassert.h"
 
 #define LABELSIZE 8
 #define LABELSGLOBAL 0 /* make the generated labels global */

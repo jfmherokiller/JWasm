@@ -30,16 +30,16 @@
 
 #include <limits.h>
 
-#include "globals.h"
-#include "memalloc.h"
-#include "parser.h"
-#include "codegen.h"
-#include "fixup.h"
-#include "fpfixup.h"
-#include "segment.h"
-#include "input.h"
-#include "listing.h"
-#include "reswords.h"
+#include "H/globals.h"
+#include "H/memalloc.h"
+#include "H/parser.h"
+#include "H/codegen.h"
+#include "H/fixup.h"
+#include "H/fpfixup.h"
+#include "H/segment.h"
+#include "H/input.h"
+#include "H/listing.h"
+#include "H/reswords.h"
 
 extern const struct opnd_class opnd_clstab[];
 #if AVXSUPP

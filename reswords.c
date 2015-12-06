@@ -8,13 +8,13 @@
 *
 ****************************************************************************/
 
-#include "globals.h"
-#include "memalloc.h"
-#include "parser.h"
-#include "reswords.h"
-#include "expreval.h"
-#include "condasm.h"
-#include "codegen.h"
+#include "H/globals.h"
+#include "H/memalloc.h"
+#include "H/parser.h"
+#include "H/reswords.h"
+#include "H/expreval.h"
+#include "H/condasm.h"
+#include "H/codegen.h"
 #ifdef __I86__
 #include "i86.h"
 #endif
@@ -42,7 +42,7 @@ static uint_16 resw_table[ HASH_TABITEMS ];
 /* define unary operand (LOW, HIGH, OFFSET, ...) type flags */
 enum unary_operand_types {
 #define res( value, func ) UOT_ ## value,
-#include "unaryop.h"
+#include "H/unaryop.h"
 #undef res
 };
 
@@ -108,7 +108,7 @@ enum operand_sets {
  */
 enum opnd_variants {
 #define OpCls( op1, op2, op3 ) OPC_ ## op1 ## op2 ## op3,
-#include "opndcls.h"
+#include "H/opndcls.h"
 #undef OpCls
 };
 
@@ -141,8 +141,8 @@ const struct instr_item InstrTable[] = {
     { opcls, byte1_info, prefix, 0, rm_info, op_dir, 0, cpu, opcode, rm_byte },
 #define insm(tok,suffix,     opcls, byte1_info,op_dir,rm_info,opcode,rm_byte,cpu,prefix) \
     { opcls, byte1_info, prefix, 1, rm_info, op_dir, 0, cpu, opcode, rm_byte },
-#include "instruct.h"
-#include "instr64.h"
+#include "H/instruct.h"
+#include "H/instr64.h"
 ins (NULL,0,OpCls(NONE,NONE,NONE),0,0,0,0,0,0,0) /* last entry - needed for its ".first" (=1) field */
 #undef insm
 #undef insn
@@ -157,11 +157,11 @@ const struct special_item SpecialTable[] = {
     { 0, 0, 0, 0, 0 }, /* dummy entry for T_NULL */
 #define res(tok, string, type, value, bytval, flags, cpu, sflags ) \
     { value, sflags, cpu, bytval, type },
-#include "special.h"
+#include "H/special.h"
 #undef res
 #define res(tok, string, value, bytval, flags, cpu, sflags ) \
     { value, sflags, cpu, bytval, RWT_DIRECTIVE },
-#include "directve.h"
+#include "H/directve.h"
 #undef res
 };
 
@@ -172,7 +172,7 @@ enum res_idx {
 #define insx(tok, string, opcls, byte1_info, op_dir, rm_info, opcode, rm_byte, cpu, prefix,flgs) T_ ## tok ## _I,
 #define insn(tok, suffix, opcls, byte1_info, op_dir, rm_info, opcode, rm_byte, cpu, prefix) T_ ## tok ## _ ## suffix,
 #define insm(tok, suffix, opcls, byte1_info, op_dir, rm_info, opcode, rm_byte, cpu, prefix) T_ ## tok ## _ ## suffix,
-#include "instruct.h"
+#include "H/instruct.h"
 #undef insm
 #undef insn
 #undef ins
@@ -180,7 +180,7 @@ enum res_idx {
 #define  ins(tok, string, opcls, byte1_info, op_dir, rm_info, opcode, rm_byte, cpu, prefix) T_ ## tok ## _I64,
 #define insn(tok, suffix, opcls, byte1_info, op_dir, rm_info, opcode, rm_byte, cpu, prefix) T_ ## tok ## _ ## suffix ## _I64,
 #define insm(tok, suffix, opcls, byte1_info, op_dir, rm_info, opcode, rm_byte, cpu, prefix) T_ ## tok ## _ ## suffix ## _I64,
-#include "instr64.h"
+#include "H/instr64.h"
 #undef insm
 #undef insn
 #undef insx
@@ -199,7 +199,7 @@ uint_16 optable_idx[] = {
 #define insx( tok, string, opcls, byte1_info, op_dir, rm_info, opcode, rm_byte, cpu, prefix,flgs) T_ ## tok ## _I,
 #define insn( tok, suffix, opcls, byte1_info, op_dir, rm_info, opcode, rm_byte, cpu, prefix)
 #define insm( tok, suffix, opcls, byte1_info, op_dir, rm_info, opcode, rm_byte, cpu, prefix)
-#include "instruct.h"
+#include "H/instruct.h"
 #undef insm
 #undef insn
 #undef insx
@@ -219,7 +219,7 @@ uint_16 optable_idx[] = {
 
 #if AVXSUPP
 #define avxins( tok, string, cpu, flgs ) T_ ## tok ## _I,
-#include "instravx.h"
+#include "H/instravx.h"
 #undef avxins
 #endif
     //T_NULL_I /* v2.06: also not needed */
@@ -229,7 +229,7 @@ uint_16 optable_idx[] = {
  */
 const struct opnd_class opnd_clstab[] = {
 #define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
-#include "opndcls.h"
+#include "H/opndcls.h"
 #undef OpCls
 };
 
@@ -238,11 +238,11 @@ const struct opnd_class opnd_clstab[] = {
 static const char resw_strings[] = {
 #define res(tok, string, type, value, bytval, flags, cpu, sflags) \
  # string
-#include "special.h"
+#include "H/special.h"
 #undef res
 #define res(tok, string, value, bytval, flags, cpu, sflags) \
  # string
-#include "directve.h"
+#include "H/directve.h"
 #undef res
 
 #define ins(tok,string, opcls, byte1_info,op_dir,rm_info,opcode,rm_byte,cpu,prefix) \
@@ -251,10 +251,10 @@ static const char resw_strings[] = {
 #define insm(tok,suffix, opcls, byte1_info,op_dir,rm_info,opcode,rm_byte,cpu,prefix)
 #define insx(tok,string, opcls, byte1_info,op_dir,rm_info,opcode,rm_byte,cpu,prefix,flgs) \
  # string
-#include "instruct.h"
+#include "H/instruct.h"
 #if AVXSUPP
 #define avxins( tok, string, cpu, flgs ) # string
-#include "instravx.h"
+#include "H/instravx.h"
 #undef avxins
 #endif
     "syscall_" /* replacement for "syscall" language type in 64-bit */
@@ -274,11 +274,11 @@ struct ReservedWord ResWordTable[] = {
     { 0, 0, 0, NULL }, /* dummy entry for T_NULL */
 #define res(tok, string, type, value, bytval, flags, cpu, sflags) \
     { 0, sizeof(#string)-1, flags, NULL },
-#include "special.h"
+#include "H/special.h"
 #undef res
 #define res(tok, string, value, bytval, flags, cpu, sflags) \
     { 0, sizeof(#string)-1, flags, NULL },
-#include "directve.h"
+#include "H/directve.h"
 #undef res
 
 #define ins(tok,string,  opcls, byte1_info,op_dir,rm_info,opcode,rm_byte,cpu,prefix) \
@@ -287,7 +287,7 @@ struct ReservedWord ResWordTable[] = {
 #define insm(tok,suffix, opcls, byte1_info,op_dir,rm_info,opcode,rm_byte,cpu,prefix)
 #define insx(tok,string, opcls, byte1_info,op_dir,rm_info,opcode,rm_byte,cpu,prefix,flags) \
     { 0, sizeof(#string)-1, flags, NULL },
-#include "instruct.h"
+#include "H/instruct.h"
 #undef insx
 #undef insm
 #undef insn
@@ -295,7 +295,7 @@ struct ReservedWord ResWordTable[] = {
 #if AVXSUPP
 #define avxins( tok, string, cpu, flgs ) \
     { 0, sizeof(#string)-1, RWF_VEX, NULL },
-#include "instravx.h"
+#include "H/instravx.h"
 #undef avxins
 #endif
 };
@@ -338,7 +338,7 @@ const uint_8 vex_flags[] = {
     VX_L|VX_NND, /* VMOVMSKPD      */ /* v2.11 */
     VX_L|VX_NND, /* VMOVMSKPS      */ /* v2.11 */
 #define avxins( tok, string, cpu, flgs ) flgs,
-#include "instravx.h"
+#include "H/instravx.h"
 #undef avxins
 };
 #endif

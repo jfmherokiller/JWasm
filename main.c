@@ -10,11 +10,11 @@
 
 #include <signal.h>
 
-#include "globals.h"
-#include "msgtext.h"
-#include "cmdline.h"
+#include "H/globals.h"
+#include "H/msgtext.h"
+#include "H/cmdline.h"
 #include <emscripten.h>
-#include "input.h" /* GetFNamePart() */
+#include "H/input.h" /* GetFNamePart() */
 #define WILDCARDS 0
 #define CATCHBREAK 0
 

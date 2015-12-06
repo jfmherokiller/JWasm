@@ -31,13 +31,13 @@
 #include <ctype.h>
 //#include <stdarg.h> /* v2.12: removed - was necessary for _splitpath()/_makepath() */
 
-#include "globals.h"
-#include "memalloc.h"
-#include "parser.h"
-#include "macro.h"
-#include "input.h"
-#include "lqueue.h"
-#include "myassert.h"
+#include "H/globals.h"
+#include "H/memalloc.h"
+#include "H/parser.h"
+#include "H/macro.h"
+#include "H/input.h"
+#include "H/lqueue.h"
+#include "H/myassert.h"
 
 #define DETECTCTRLZ 1 /* 1=Ctrl-Z in input stream will skip rest of the file */
 

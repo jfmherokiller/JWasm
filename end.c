@@ -10,26 +10,26 @@
 
 #include <ctype.h>
 
-#include "globals.h"
-#include "memalloc.h"
-#include "parser.h"
-#include "segment.h"
-#include "extern.h"
-#include "fixup.h"
-#include "lqueue.h"
-#include "tokenize.h"
-#include "expreval.h"
-#include "types.h"
-#include "listing.h"
-#include "proc.h"
-#include "omf.h"
+#include "H/globals.h"
+#include "H/memalloc.h"
+#include "H/parser.h"
+#include "H/segment.h"
+#include "H/extern.h"
+#include "H/fixup.h"
+#include "H/lqueue.h"
+#include "H/tokenize.h"
+#include "H/expreval.h"
+#include "H/types.h"
+#include "H/listing.h"
+#include "H/proc.h"
+#include "H/omf.h"
 
-#include "myassert.h"
+#include "H/myassert.h"
 #if DLLIMPORT
-#include "mangle.h"
+#include "H/mangle.h"
 #endif
 #if PE_SUPPORT
-#include "bin.h"
+#include "H/bin.h"
 #endif
 
 /* prototypes */

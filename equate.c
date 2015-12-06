@@ -10,18 +10,18 @@
 
 #include <ctype.h>
 
-#include "globals.h"
-#include "memalloc.h"
-#include "parser.h"
-#include "expreval.h"
-#include "equate.h"
-#include "tokenize.h"
-#include "macro.h"
-#include "fastpass.h"
-#include "listing.h"
-#include "input.h"
-#include "fixup.h"
-#include "myassert.h"
+#include "H/globals.h"
+#include "H/memalloc.h"
+#include "H/parser.h"
+#include "H/expreval.h"
+#include "H/equate.h"
+#include "H/tokenize.h"
+#include "H/macro.h"
+#include "H/fastpass.h"
+#include "H/listing.h"
+#include "H/input.h"
+#include "H/fixup.h"
+#include "H/myassert.h"
 
 extern void myatoi128( const char *, uint_64[], int, int );
 

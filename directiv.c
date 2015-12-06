@@ -20,27 +20,27 @@
 
 #include <ctype.h>
 
-#include "globals.h"
-#include "memalloc.h"
-#include "parser.h"
-#include "segment.h"
-#include "input.h"
-#include "tokenize.h"
-#include "expreval.h"
-#include "types.h"
-#include "fastpass.h"
-#include "listing.h"
-#include "omf.h"
-#include "macro.h"
+#include "H/globals.h"
+#include "H/memalloc.h"
+#include "H/parser.h"
+#include "H/segment.h"
+#include "H/input.h"
+#include "H/tokenize.h"
+#include "H/expreval.h"
+#include "H/types.h"
+#include "H/fastpass.h"
+#include "H/listing.h"
+#include "H/omf.h"
+#include "H/macro.h"
 
 #define  res(token, function) extern ret_code function( int, struct asm_tok[] );
-#include "dirtype.h"
+#include "H/dirtype.h"
 #undef res
 
 /* table of function addresses for directives */
 #define  res(token, function) function ,
 ret_code (* const directive_tab[])( int, struct asm_tok[] ) = {
-#include "dirtype.h"
+#include "H/dirtype.h"
 };
 #undef res
 

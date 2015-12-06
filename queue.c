@@ -30,9 +30,9 @@
 
 #include <stddef.h>
 
-#include "memalloc.h"
-#include "queue.h"
-#include "myassert.h"
+#include "H/memalloc.h"
+#include "H/queue.h"
+#include "H/myassert.h"
 
 #if 0 /* v2.04: not needed */
 void QInit( struct qdesc *q )

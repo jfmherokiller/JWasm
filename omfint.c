@@ -30,10 +30,10 @@
 
 #include <stddef.h>
 
-#include "globals.h"
-#include "omfint.h"
-#include "omfspec.h"
-#include "myassert.h"
+#include "H/globals.h"
+#include "H/omfint.h"
+#include "H/omfspec.h"
+#include "H/myassert.h"
 
 #ifdef __I86__
 #define FFQUAL __near

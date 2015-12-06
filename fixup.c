@@ -28,13 +28,13 @@
 *
 ****************************************************************************/
 
-#include "globals.h"
-#include "memalloc.h"
-#include "parser.h"
-#include "fixup.h"
-#include "segment.h"
-#include "omfspec.h"
-#include "myassert.h"
+#include "H/globals.h"
+#include "H/memalloc.h"
+#include "H/parser.h"
+#include "H/fixup.h"
+#include "H/segment.h"
+#include "H/omfspec.h"
+#include "H/myassert.h"
 
 #define GNURELOCS 1
 

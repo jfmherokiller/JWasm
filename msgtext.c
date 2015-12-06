@@ -8,10 +8,10 @@
 *
 ****************************************************************************/
 
-#include "globals.h"
-#include "token.h"
-#include "tokenize.h"
-#include "msgtext.h"
+#include "H/globals.h"
+#include "H/token.h"
+#include "H/tokenize.h"
+#include "H/msgtext.h"
 
 #define USERESOURCES 0 /* 1=use Win string resources, won't work for Linux! */
 
@@ -52,7 +52,7 @@ static const char __based ( __segname("_CODE") ) * const msgtexts[] = {
 #undef pick
 #define pick( code, string )  string,
 static const char * const msgtexts[] = {
-#include "msgdef.h"
+#include "H/msgdef.h"
 };
 #endif
 

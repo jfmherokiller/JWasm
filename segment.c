@@ -30,23 +30,23 @@
 
 #include <ctype.h>
 
-#include "globals.h"
-#include "memalloc.h"
-#include "parser.h"
-#include "reswords.h"
-#include "segment.h"
-#include "expreval.h"
-#include "omf.h"
-#include "omfspec.h"
-#include "fastpass.h"
-#include "coffspec.h"
-#include "assume.h"
-#include "listing.h"
-#include "msgtext.h"
-#include "types.h"
-#include "fixup.h"
+#include "H/globals.h"
+#include "H/memalloc.h"
+#include "H/parser.h"
+#include "H/reswords.h"
+#include "H/segment.h"
+#include "H/expreval.h"
+#include "H/omf.h"
+#include "H/omfspec.h"
+#include "H/fastpass.h"
+#include "H/coffspec.h"
+#include "H/assume.h"
+#include "H/listing.h"
+#include "H/msgtext.h"
+#include "H/types.h"
+#include "H/fixup.h"
 
-#include "myassert.h"
+#include "H/myassert.h"
 
 extern ret_code    EndstructDirective( int, struct asm_tok tokenarray[] );
 
@@ -76,12 +76,12 @@ struct typeinfo {
 
 static const char * const SegAttrToken[] = {
 #define sitem( text, value, init ) text,
-#include "segattr.h"
+#include "H/segattr.h"
 #undef sitem
 };
 static const struct typeinfo SegAttrValue[] = {
 #define sitem( text, value, init ) { value, init },
-#include "segattr.h"
+#include "H/segattr.h"
 #undef sitem
 };
 

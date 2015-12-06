@@ -31,18 +31,18 @@
 #include <stddef.h>
 #include <ctype.h>
 
-#include "globals.h"
-#include "parser.h"
-#include "reswords.h"
-#include "expreval.h"
-#include "segment.h"
-#include "proc.h"
-#include "assume.h"
-#include "tokenize.h"
-#include "types.h"
-#include "label.h"
-#include "atofloat.h"
-#include "myassert.h"
+#include "H/globals.h"
+#include "H/parser.h"
+#include "H/reswords.h"
+#include "H/expreval.h"
+#include "H/segment.h"
+#include "H/proc.h"
+#include "H/assume.h"
+#include "H/tokenize.h"
+#include "H/types.h"
+#include "H/label.h"
+#include "H/atofloat.h"
+#include "H/myassert.h"
 
 #define ALIAS_IN_EXPR 1 /* allow alias names in expression */
 
@@ -1675,7 +1675,7 @@ static ret_code wimask_op( int oper, struct expr *opnd1, struct expr *opnd2, str
 
 #define  res(token, function) function ,
 static ret_code (* const unaryop[])( int, struct expr *, struct expr *, struct asym *, char * ) = {
-#include "unaryop.h"
+#include "H/unaryop.h"
 };
 #undef res
 

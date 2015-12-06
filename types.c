@@ -10,19 +10,19 @@
 
 #include <ctype.h>
 
-#include "globals.h"
-#include "memalloc.h"
-#include "parser.h"
-#include "segment.h"
-#include "proc.h"
-#include "input.h"
-#include "tokenize.h"
-#include "types.h"
-#include "expreval.h"
-#include "label.h"
-#include "listing.h"
-#include "fastpass.h"
-#include "myassert.h"
+#include "H/globals.h"
+#include "H/memalloc.h"
+#include "H/parser.h"
+#include "H/segment.h"
+#include "H/proc.h"
+#include "H/input.h"
+#include "H/tokenize.h"
+#include "H/types.h"
+#include "H/expreval.h"
+#include "H/label.h"
+#include "H/listing.h"
+#include "H/fastpass.h"
+#include "H/myassert.h"
 
 /* v2.04: changed to 0 */
 //#define ANYNAME 1 /* fixme: this probably should be changed to 0 */
@@ -242,7 +242,7 @@ ret_code StructDirective( int i, struct asm_tok tokenarray[] )
         if ( tokenarray[i].token == T_COMMA ) {
             i++;
             if ( tokenarray[i].token == T_ID &&
-                (_stricmp( tokenarray[i].string_ptr, szNonUnique ) == 0 ) ) {
+                (strcasecmp( tokenarray[i].string_ptr, szNonUnique ) == 0 ) ) {
                 /* currently NONUNIQUE is ignored */
                 EmitWarn( 2, TOKEN_IGNORED, szNonUnique );
                 i++;
@@ -439,7 +439,7 @@ ret_code EndstructDirective( int i, struct asm_tok tokenarray[] )
             size++;
         if ( size > dir->e.structinfo->alignment )
             size = dir->e.structinfo->alignment;
-        dir->sym.total_size = (dir->sym.total_size + size - 1) & (-size);
+        dir->sym.total_size = (dir->sym.total_size + size - 1) & (-(int)size);
         DebugMsg1(("EndstructDirective:, struct size after final alignment=%" I32_SPEC "u\n", dir->sym.total_size));
     }
 #endif
@@ -691,7 +691,7 @@ struct asym *CreateStructField( int loc, struct asm_tok tokenarray[], const char
             if ( si->alignment < size )
                 offset = (offset + (si->alignment - 1)) & ( - si->alignment);
             else if ( size )
-                offset = (offset + (size - 1)) & (-size);
+                offset = (offset + (size - 1)) & (-(int)size);
         }
         /* adjust the struct's current offset + size.
          The field's size is added in UpdateStructSize()

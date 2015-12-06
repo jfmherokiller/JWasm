@@ -10,18 +10,18 @@
 
 #include <ctype.h>
 
-#include "globals.h"
-#include "memalloc.h"
-#include "parser.h"
-#include "segment.h"
-#include "lqueue.h"
-#include "expreval.h"
-#include "fastpass.h"
-#include "listing.h"
-#include "msgtext.h"
-#include "tokenize.h"
+#include "H/globals.h"
+#include "H/memalloc.h"
+#include "H/parser.h"
+#include "H/segment.h"
+#include "H/lqueue.h"
+#include "H/expreval.h"
+#include "H/fastpass.h"
+#include "H/listing.h"
+#include "H/msgtext.h"
+#include "H/tokenize.h"
 
-#include "myassert.h"
+#include "H/myassert.h"
 
 #define DEFAULT_STACK_SIZE      1024
 

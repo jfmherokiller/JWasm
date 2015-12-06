@@ -10,16 +10,16 @@
 
 #include <ctype.h>
 
-#include "globals.h"
-#include "memalloc.h"
-#include "parser.h"
-#include "input.h"
-#include "equate.h"
-#include "expreval.h"
-#include "tokenize.h"
-#include "macro.h"
-#include "listing.h"
-#include "reswords.h"
+#include "H/globals.h"
+#include "H/memalloc.h"
+#include "H/parser.h"
+#include "H/input.h"
+#include "H/equate.h"
+#include "H/expreval.h"
+#include "H/tokenize.h"
+#include "H/macro.h"
+#include "H/listing.h"
+#include "H/reswords.h"
 
 ret_code LoopDirective( int i, struct asm_tok tokenarray[] )
 /**********************************************************/

@@ -36,16 +36,16 @@
 
 #include <limits.h>
 
-#include "globals.h"
-#include "parser.h"
-#include "fixup.h"
-#include "expreval.h"
-#include "fastpass.h"
-#include "segment.h"
-#include "input.h"
-#include "assume.h"
-#include "codegen.h"
-#include "myassert.h"
+#include "H/globals.h"
+#include "H/parser.h"
+#include "H/fixup.h"
+#include "H/expreval.h"
+#include "H/fastpass.h"
+#include "H/segment.h"
+#include "H/input.h"
+#include "H/assume.h"
+#include "H/codegen.h"
+#include "H/myassert.h"
 
 #define NEEDLABEL 1 /* 1=better Masm compatibility */
 

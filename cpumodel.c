@@ -10,26 +10,26 @@
 
 #include <ctype.h>
 
-#include "globals.h"
-#include "memalloc.h"
-#include "parser.h"
-#include "segment.h"
-#include "assume.h"
-#include "equate.h"
-#include "lqueue.h"
-#include "tokenize.h"
-#include "expreval.h"
-#include "fastpass.h"
-#include "listing.h"
-#include "proc.h"
-#include "macro.h"
-#include "fixup.h"
+#include "H/globals.h"
+#include "H/memalloc.h"
+#include "H/parser.h"
+#include "H/segment.h"
+#include "H/assume.h"
+#include "H/equate.h"
+#include "H/lqueue.h"
+#include "H/tokenize.h"
+#include "H/expreval.h"
+#include "H/fastpass.h"
+#include "H/listing.h"
+#include "H/proc.h"
+#include "H/macro.h"
+#include "H/fixup.h"
 #ifdef DEBUG_OUT
-#include "reswords.h"
+#include "H/reswords.h"
 #endif
-#include "myassert.h"
+#include "H/myassert.h"
 #if PE_SUPPORT
-#include "bin.h"
+#include "H/bin.h"
 #endif
 
 #define DOT_XMMARG 0 /* 1=optional argument for .XMM directive */

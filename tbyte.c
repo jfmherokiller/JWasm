@@ -37,8 +37,8 @@
 
 #include <ctype.h>
 
-#include "globals.h"
-#include "tbyte.h"
+#include "H/globals.h"
+#include "H/tbyte.h"
 
 #if defined(LLONG_MAX) || defined(__GNUC__) || defined(__TINYC__)
 #define MAXUI64BIT 0x8000000000000000ULL

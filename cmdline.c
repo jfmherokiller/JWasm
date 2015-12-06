@@ -31,15 +31,14 @@
 //#include <stdarg.h>
 #include <stddef.h>
 #include <ctype.h>
-#include <emscripten.h>
-#include "globals.h"
-#include "memalloc.h"
-#include "parser.h"
-#include "msgtext.h"
-#include "dbgcv.h"
-#include "cmdline.h"
-#include "myassert.h"
-#include "input.h" /* GetFNamePart() */
+#include "H/globals.h"
+#include "H/memalloc.h"
+#include "H/parser.h"
+#include "H/msgtext.h"
+#include "H/dbgcv.h"
+#include "H/cmdline.h"
+#include "H/myassert.h"
+#include "H/input.h" /* GetFNamePart() */
 
 //#ifdef __OSI__
 //  #include "ostype.h"

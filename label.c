@@ -28,15 +28,15 @@
 *
 ****************************************************************************/
 
-#include "globals.h"
-#include "parser.h"
-#include "fixup.h"
-#include "segment.h"
-#include "proc.h"
-#include "assume.h"
-#include "types.h"
-#include "label.h"
-#include "listing.h"
+#include "H/globals.h"
+#include "H/parser.h"
+#include "H/fixup.h"
+#include "H/segment.h"
+#include "H/proc.h"
+#include "H/assume.h"
+#include "H/types.h"
+#include "H/label.h"
+#include "H/listing.h"
 
 /* LABELARRAY: syntax extension to LABEL directive:
  *  <label> LABEL <qualified type>[: index]
@@ -49,7 +49,7 @@
 #endif
 
 #if LABELARRAY
-#include "expreval.h"
+#include "H/expreval.h"
 #endif
 
 void LabelInit( void )

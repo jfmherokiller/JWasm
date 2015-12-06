@@ -18,14 +18,14 @@
 
 #include <ctype.h>
 
-#include "globals.h"
-#include "memalloc.h"
-#include "parser.h"
-#include "input.h"
-#include "tokenize.h"
-#include "macro.h"
-#include "fastpass.h"
-#include "listing.h"
+#include "H/globals.h"
+#include "H/memalloc.h"
+#include "H/parser.h"
+#include "H/input.h"
+#include "H/tokenize.h"
+#include "H/macro.h"
+#include "H/fastpass.h"
+#include "H/listing.h"
 
 /* a placeholder consists of escape char (0x0a) + index (1 byte).
  if this is to change, function fill_placeholders() must

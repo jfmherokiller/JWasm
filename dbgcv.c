@@ -10,13 +10,13 @@
 
 #include <stddef.h>
 
-#include "globals.h"
-#include "memalloc.h"
-#include "parser.h"
-#include "segment.h"
-#include "fixup.h"
-#include "myassert.h"
-#include "dbgcv.h"
+#include "H/globals.h"
+#include "H/memalloc.h"
+#include "H/parser.h"
+#include "H/segment.h"
+#include "H/fixup.h"
+#include "H/myassert.h"
+#include "H/dbgcv.h"
 
 #define EQUATESYMS 1 /* 1=generate info for EQUates ( -Zi3 ) */
 

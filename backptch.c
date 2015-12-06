@@ -28,11 +28,11 @@
 *
 ****************************************************************************/
 
-#include "globals.h"
-#include "memalloc.h"
-#include "parser.h"
-#include "fixup.h"
-#include "segment.h"
+#include "H/globals.h"
+#include "H/memalloc.h"
+#include "H/parser.h"
+#include "H/fixup.h"
+#include "H/segment.h"
 
 /*
  * LABELOPT: short jump label optimization.

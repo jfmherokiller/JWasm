@@ -32,15 +32,15 @@
 #include <ctype.h>
 #include <setjmp.h>
 
-#include "globals.h"
-#include "memalloc.h"
-#include "parser.h"
-#include "input.h"
-#include "tokenize.h"
-#include "macro.h"
-#include "msgtext.h"
-#include "listing.h"
-#include "segment.h"
+#include "H/globals.h"
+#include "H/memalloc.h"
+#include "H/parser.h"
+#include "H/input.h"
+#include "H/tokenize.h"
+#include "H/macro.h"
+#include "H/msgtext.h"
+#include "H/listing.h"
+#include "H/segment.h"
 
 extern void             print_source_nesting_structure( void );
 extern jmp_buf          jmpenv;
@@ -51,7 +51,7 @@ extern jmp_buf          jmpenv;
 char banner_printed = FALSE;
 
 static const char usage[] = {
-#include "usage.h"
+#include "H/usage.h"
 };
 
 

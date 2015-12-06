@@ -30,18 +30,18 @@
 
 #include <ctype.h>
 
-#include "globals.h"
-#include "memalloc.h"
-#include "parser.h"
-#include "segment.h"
-#include "assume.h"
-#include "types.h"
-#include "label.h"
-#include "lqueue.h"
-#include "expreval.h"
-#include "fastpass.h"
-#include "tokenize.h"
-#include "listing.h"
+#include "H/globals.h"
+#include "H/memalloc.h"
+#include "H/parser.h"
+#include "H/segment.h"
+#include "H/assume.h"
+#include "H/types.h"
+#include "H/label.h"
+#include "H/lqueue.h"
+#include "H/expreval.h"
+#include "H/fastpass.h"
+#include "H/tokenize.h"
+#include "H/listing.h"
 
 #if AMD64_SUPPORT
 #define NUM_STDREGS 16

@@ -10,13 +10,13 @@
 
 #include <ctype.h>
 
-#include "globals.h"
-#include "memalloc.h"
-#include "parser.h"
-#include "reswords.h"
-#include "expreval.h"
+#include "H/globals.h"
+#include "H/memalloc.h"
+#include "H/parser.h"
+#include "H/reswords.h"
+#include "H/expreval.h"
 #if STACKBASESUPP
-#include "equate.h"
+#include "H/equate.h"
 #endif
 
 /* prototypes */

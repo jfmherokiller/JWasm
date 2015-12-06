@@ -11,21 +11,21 @@
 #include <ctype.h>
 #include <time.h>
 
-#include "globals.h"
-#include "memalloc.h"
-#include "parser.h"
-#include "input.h"
-#include "tokenize.h"
-#include "segment.h"
-#include "assume.h"
-#include "proc.h"
-#include "expreval.h"
-#include "extern.h"
-#include "fastpass.h"
-#include "msgtext.h"
-#include "myassert.h"
-#include "linnum.h"
-#include "omf.h"
+#include "H/globals.h"
+#include "H/memalloc.h"
+#include "H/parser.h"
+#include "H/input.h"
+#include "H/tokenize.h"
+#include "H/segment.h"
+#include "H/assume.h"
+#include "H/proc.h"
+#include "H/expreval.h"
+#include "H/extern.h"
+#include "H/fastpass.h"
+#include "H/msgtext.h"
+#include "H/myassert.h"
+#include "H/linnum.h"
+#include "H/omf.h"
 
 extern struct qdesc   LinnumQueue;    /* queue of line_num_info items ( OMF only ) */
 extern int            procidx;

@@ -27,8 +27,10 @@
 * Description:  JWasm globals and limits.
 *
 ****************************************************************************/
-
-
+int strncasecmp(const char *s1, const char * s2, unsigned n);
+int strcasecmp(const char *s1, const char *s2);
+#define _CRT_SECURE_NO_WARNINGS 1
+#pragma warning(disable : 4996)
 #ifndef _GLOBALS_H_INCLUDED
 #define _GLOBALS_H_INCLUDED
 #define __UNIX__

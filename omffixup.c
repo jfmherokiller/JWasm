@@ -30,13 +30,13 @@
 
 #include <stddef.h>
 
-#include "globals.h"
-#include "parser.h"
-#include "segment.h"
-#include "fixup.h"
-#include "omfint.h"
-#include "omfspec.h"
-#include "myassert.h"
+#include "H/globals.h"
+#include "H/parser.h"
+#include "H/segment.h"
+#include "H/fixup.h"
+#include "H/omfint.h"
+#include "H/omfspec.h"
+#include "H/myassert.h"
 
 extern const char szNull[];
 extern unsigned omf_GetGrpIdx( struct asym *sym );

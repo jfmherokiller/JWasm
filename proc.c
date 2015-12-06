@@ -10,29 +10,29 @@
 
 #include <ctype.h>
 
-#include "globals.h"
-#include "memalloc.h"
-#include "parser.h"
-#include "segment.h"
-#include "extern.h"
-#include "equate.h"
-#include "fixup.h"
-#include "label.h"
-#include "input.h"
-#include "lqueue.h"
-#include "tokenize.h"
-#include "expreval.h"
-#include "types.h"
-#include "condasm.h"
-#include "macro.h"
-#include "proc.h"
-#include "fastpass.h"
-#include "listing.h"
-#include "posndir.h"
-#include "myassert.h"
-#include "reswords.h"
+#include "H/globals.h"
+#include "H/memalloc.h"
+#include "H/parser.h"
+#include "H/segment.h"
+#include "H/extern.h"
+#include "H/equate.h"
+#include "H/fixup.h"
+#include "H/label.h"
+#include "H/input.h"
+#include "H/lqueue.h"
+#include "H/tokenize.h"
+#include "H/expreval.h"
+#include "H/types.h"
+#include "H/condasm.h"
+#include "H/macro.h"
+#include "H/proc.h"
+#include "H/fastpass.h"
+#include "H/listing.h"
+#include "H/posndir.h"
+#include "H/myassert.h"
+#include "H/reswords.h"
 #if AMD64_SUPPORT
-#include "win64seh.h"
+#include "H/win64seh.h"
 #endif
 
 #ifdef __I86__
@@ -2523,7 +2523,7 @@ static void SetLocalOffsets( struct proc_info *info )
             info->localsize = ROUND_UP( info->localsize, align );
         else if ( itemsize ) /* v2.04: skip if size == 0 */
             info->localsize = ROUND_UP( info->localsize, itemsize );
-        curr->sym.offset = - info->localsize;
+        curr->sym.offset = -(int) info->localsize;
         DebugMsg1(("SetLocalOffsets(%s): offset of %s (size=%u) set to %d\n", CurrProc->sym.name, curr->sym.name, curr->sym.total_size, curr->sym.offset));
     }
 

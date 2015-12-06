@@ -12,8 +12,8 @@
     #include <sys/mman.h>
 #endif
 
-#include "globals.h"
-#include "memalloc.h"
+#include "H/globals.h"
+#include "H/memalloc.h"
 
 /* what items are stored in the heap?
  * - symbols + symbol names ( asym, dsym; symbol.c )

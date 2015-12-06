@@ -10,13 +10,13 @@
 
 #include <ctype.h>
 
-#include "globals.h"
-#include "memalloc.h"
-#include "parser.h"
-#include "assume.h"
-#include "expreval.h"
-#include "fastpass.h"
-#include "listing.h"
+#include "H/globals.h"
+#include "H/memalloc.h"
+#include "H/parser.h"
+#include "H/assume.h"
+#include "H/expreval.h"
+#include "H/fastpass.h"
+#include "H/listing.h"
 
 /* v2.10: static variables moved to ModuleInfo */
 #define ContextStack ModuleInfo.g.ContextStack

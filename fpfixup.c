@@ -30,15 +30,15 @@
 *
 ****************************************************************************/
 
-#include "globals.h"
-#include "parser.h"
-#include "extern.h"
-#include "fixup.h"
-#include "mangle.h"
-#include "myassert.h"
-#include "segment.h"
-#include "omf.h"
-#include "omfspec.h"
+#include "H/globals.h"
+#include "H/parser.h"
+#include "H/extern.h"
+#include "H/fixup.h"
+#include "H/mangle.h"
+#include "H/myassert.h"
+#include "H/segment.h"
+#include "H/omf.h"
+#include "H/omfspec.h"
 
 enum fp_patches {
     FPP_WAIT,

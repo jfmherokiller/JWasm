@@ -19,12 +19,12 @@
 
 #include <ctype.h>
 
-#include "globals.h"
-#include "memalloc.h"
-#include "parser.h"
-#include "input.h"
-#include "segment.h"
-#include "fastpass.h"
+#include "H/globals.h"
+#include "H/memalloc.h"
+#include "H/parser.h"
+#include "H/input.h"
+#include "H/segment.h"
+#include "H/fastpass.h"
 
 #if FASTPASS
 

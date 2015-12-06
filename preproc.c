@@ -11,16 +11,16 @@
 #include <ctype.h>
 #include <stdarg.h>
 
-#include "globals.h"
-#include "memalloc.h"
-#include "parser.h"
-#include "condasm.h"
-#include "tokenize.h"
-#include "equate.h"
-#include "macro.h"
-#include "input.h"
-#include "fastpass.h"
-#include "listing.h"
+#include "H/globals.h"
+#include "H/memalloc.h"
+#include "H/parser.h"
+#include "H/condasm.h"
+#include "H/tokenize.h"
+#include "H/equate.h"
+#include "H/macro.h"
+#include "H/input.h"
+#include "H/fastpass.h"
+#include "H/listing.h"
 
 #define REMOVECOMENT 0 /* 1=remove comments from source       */
 

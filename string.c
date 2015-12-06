@@ -22,17 +22,17 @@
 
 #include <ctype.h>
 
-#include "globals.h"
-#include "memalloc.h"
-#include "parser.h"
-#include "expreval.h"
-#include "equate.h"
-#include "input.h"
-#include "tokenize.h"
-#include "macro.h"
-#include "condasm.h"
-#include "fastpass.h"
-#include "listing.h"
+#include "H/globals.h"
+#include "H/memalloc.h"
+#include "H/parser.h"
+#include "H/expreval.h"
+#include "H/equate.h"
+#include "H/input.h"
+#include "H/tokenize.h"
+#include "H/macro.h"
+#include "H/condasm.h"
+#include "H/fastpass.h"
+#include "H/listing.h"
 
 #ifdef DEBUG_OUT
 static uint_32 catstrcnt;

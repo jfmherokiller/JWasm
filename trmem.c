@@ -39,7 +39,7 @@
 #include <i86.h>
 #endif
 
-#include "trmem.h"
+#include "H/trmem.h"
 
 typedef unsigned long   uint_32;
 typedef unsigned        uint;
@@ -771,6 +771,7 @@ static void memLine( FILE *fh, const char *buf, unsigned size )
 void tm_Init( void )
 /******************/
 {
+#pragma warning(disable : 4996)
     if ( FileTrmem = fopen( TRMEM_LOGFN, "w" ) ) {
         //hTrmem = _trmem_open( malloc, free, realloc, _expand, memFile, memLine,
         hTrmem = _trmem_open( malloc, free, _TRMEM_NO_REALLOC, _TRMEM_NO_REALLOC, FileTrmem, memLine,

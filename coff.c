@@ -11,19 +11,19 @@
 #include <ctype.h>
 #include <time.h>
 
-#include "globals.h"
-#include "memalloc.h"
-#include "mangle.h"
-#include "parser.h"
-#include "fixup.h"
-#include "segment.h"
-#include "extern.h"
-#include "coff.h"
-#include "coffspec.h"
-#include "input.h"
-#include "myassert.h"
-#include "omfspec.h"
-#include "linnum.h"
+#include "H/globals.h"
+#include "H/memalloc.h"
+#include "H/mangle.h"
+#include "H/parser.h"
+#include "H/fixup.h"
+#include "H/segment.h"
+#include "H/extern.h"
+#include "H/coff.h"
+#include "H/coffspec.h"
+#include "H/input.h"
+#include "H/myassert.h"
+#include "H/omfspec.h"
+#include "H/linnum.h"
 
 #if COFF_SUPPORT
 

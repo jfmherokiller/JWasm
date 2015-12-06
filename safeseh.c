@@ -10,11 +10,11 @@
 
 #include <ctype.h>
 
-#include "globals.h"
-#include "memalloc.h"
-#include "parser.h"
+#include "H/globals.h"
+#include "H/memalloc.h"
+#include "H/parser.h"
 
-#include "myassert.h"
+#include "H/myassert.h"
 
 #if COFF_SUPPORT
 

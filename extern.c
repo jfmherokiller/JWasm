@@ -12,22 +12,22 @@
 *               COMM
 ****************************************************************************/
 
-#include "globals.h"
-#include "memalloc.h"
-#include "parser.h"
-#include "segment.h"
-#include "fastpass.h"
-#include "listing.h"
-#include "equate.h"
-#include "fixup.h"
-#include "mangle.h"
-#include "label.h"
-#include "input.h"
-#include "expreval.h"
-#include "types.h"
-#include "condasm.h"
-#include "proc.h"
-#include "extern.h"
+#include "H/globals.h"
+#include "H/memalloc.h"
+#include "H/parser.h"
+#include "H/segment.h"
+#include "H/fastpass.h"
+#include "H/listing.h"
+#include "H/equate.h"
+#include "H/fixup.h"
+#include "H/mangle.h"
+#include "H/label.h"
+#include "H/input.h"
+#include "H/expreval.h"
+#include "H/types.h"
+#include "H/condasm.h"
+#include "H/proc.h"
+#include "H/extern.h"
 
 /* Masm accepts EXTERN for internal absolute symbols:
  * X EQU 0

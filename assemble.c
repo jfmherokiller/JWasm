@@ -10,44 +10,44 @@
 
 #include <ctype.h>
 #include <time.h>
-#include "globals.h"
-#include "memalloc.h"
-#include "input.h"
-#include "parser.h"
-#include "reswords.h"
-#include "tokenize.h"
-#include "condasm.h"
-#include "segment.h"
-#include "assume.h"
-#include "proc.h"
-#include "expreval.h"
-#include "hll.h"
-#include "context.h"
-#include "types.h"
-#include "label.h"
-#include "macro.h"
-#include "extern.h"
-#include "fixup.h"
-#include "omf.h"
-#include "fastpass.h"
-#include "listing.h"
-#include "msgtext.h"
-#include "myassert.h"
-#include "linnum.h"
-#include "cpumodel.h"
-#include "lqueue.h"
+#include "H/globals.h"
+#include "H/memalloc.h"
+#include "H/input.h"
+#include "H/parser.h"
+#include "H/reswords.h"
+#include "H/tokenize.h"
+#include "H/condasm.h"
+#include "H/segment.h"
+#include "H/assume.h"
+#include "H/proc.h"
+#include "H/expreval.h"
+#include "H/hll.h"
+#include "H/context.h"
+#include "H/types.h"
+#include "H/label.h"
+#include "H/macro.h"
+#include "H/extern.h"
+#include "H/fixup.h"
+#include "H/omf.h"
+#include "H/fastpass.h"
+#include "H/listing.h"
+#include "H/msgtext.h"
+#include "H/myassert.h"
+#include "H/linnum.h"
+#include "H/cpumodel.h"
+#include "H/lqueue.h"
 #if DLLIMPORT
-#include "mangle.h"
+#include "H/mangle.h"
 #endif
 
 #if COFF_SUPPORT
-#include "coff.h"
+#include "H/coff.h"
 #endif
 #if ELF_SUPPORT
-#include "elf.h"
+#include "H/elf.h"
 #endif
 #if BIN_SUPPORT
-#include "bin.h"
+#include "H/bin.h"
 #endif
 
 #if 1 //def __SW_BD

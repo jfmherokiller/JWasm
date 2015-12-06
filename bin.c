@@ -13,27 +13,27 @@
 #include <ctype.h>
 #include <time.h>
 
-#include "globals.h"
-#include "memalloc.h"
-#include "parser.h"
-#include "fixup.h"
-#include "omfspec.h"
-#include "bin.h"
-#include "listing.h"
-#include "lqueue.h"
-#include "myassert.h"
+#include "H/globals.h"
+#include "H/memalloc.h"
+#include "H/parser.h"
+#include "H/fixup.h"
+#include "H/omfspec.h"
+#include "H/bin.h"
+#include "H/listing.h"
+#include "H/lqueue.h"
+#include "H/myassert.h"
 
 #if BIN_SUPPORT
 
 #define SECTORMAP 1 /* 1=print sector map in listing file */
 
 #if PE_SUPPORT
-#include "coffspec.h"
-#include "input.h"
-#include "mangle.h"
-#include "segment.h"
-#include "equate.h"
-#include "expreval.h"
+#include "H/coffspec.h"
+#include "H/input.h"
+#include "H/mangle.h"
+#include "H/segment.h"
+#include "H/equate.h"
+#include "H/expreval.h"
 
 #define RAWSIZE_ROUND 1 /* SectionHeader.SizeOfRawData is multiple FileAlign. Required by MS COFF spec */
 #define IMGSIZE_ROUND 1 /* OptionalHeader.SizeOfImage is multiple ObjectAlign. Required by MS COFF spec */
@@ -48,7 +48,7 @@
 
 /* pespec.h contains MZ header declaration */
 #if MZ_SUPPORT || PE_SUPPORT
-#include "pespec.h"
+#include "H/pespec.h"
 #endif
 
 extern void SortSegments( int );

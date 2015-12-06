@@ -11,13 +11,13 @@
 
 #include <stdarg.h>
 
-#include "globals.h"
-#include "memalloc.h"
-#include "reswords.h"
-#include "input.h"
-#include "parser.h"
-#include "preproc.h"
-#include "myassert.h"
+#include "H/globals.h"
+#include "H/memalloc.h"
+#include "H/reswords.h"
+#include "H/input.h"
+#include "H/parser.h"
+#include "H/preproc.h"
+#include "H/myassert.h"
 
 extern struct ReservedWord  ResWordTable[];
 

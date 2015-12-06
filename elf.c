@@ -11,16 +11,16 @@
 #include <ctype.h>
 #include <time.h>
 
-#include "globals.h"
-#include "memalloc.h"
-#include "parser.h"
-#include "mangle.h"
-#include "fixup.h"
-#include "segment.h"
-#include "extern.h"
-#include "elf.h"
-#include "elfspec.h"
-#include "myassert.h"
+#include "H/globals.h"
+#include "H/memalloc.h"
+#include "H/parser.h"
+#include "H/mangle.h"
+#include "H/fixup.h"
+#include "H/segment.h"
+#include "H/extern.h"
+#include "H/elf.h"
+#include "H/elfspec.h"
+#include "H/myassert.h"
 
 #if ELF_SUPPORT
 

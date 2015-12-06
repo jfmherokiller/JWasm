@@ -11,22 +11,22 @@
 #include <ctype.h>
 #include <limits.h>
 
-#include "globals.h"
-#include "memalloc.h"
-#include "parser.h"
-#include "reswords.h"
-#include "expreval.h"
-#include "lqueue.h"
-#include "equate.h"
-#include "assume.h"
-#include "segment.h"
-#include "listing.h"
-#include "myassert.h"
+#include "H/globals.h"
+#include "H/memalloc.h"
+#include "H/parser.h"
+#include "H/reswords.h"
+#include "H/expreval.h"
+#include "H/lqueue.h"
+#include "H/equate.h"
+#include "H/assume.h"
+#include "H/segment.h"
+#include "H/listing.h"
+#include "H/myassert.h"
 #if DLLIMPORT
-#include "mangle.h"
-#include "extern.h"
+#include "H/mangle.h"
+#include "H/extern.h"
 #endif
-#include "proc.h"
+#include "H/proc.h"
 
 extern int_64           maxintvalues[];
 extern int_64           minintvalues[];

@@ -11,19 +11,19 @@
 #include <stdarg.h>
 #include <ctype.h>
 
-#include "globals.h"
-#include "memalloc.h"
-#include "parser.h"
-#include "reswords.h"
-#include "segment.h"
-#include "tokenize.h"
-#include "macro.h"
-#include "fastpass.h"
-#include "listing.h"
-#include "input.h"
-#include "msgtext.h"
-#include "types.h"
-#include "omfspec.h"
+#include "H/globals.h"
+#include "H/memalloc.h"
+#include "H/parser.h"
+#include "H/reswords.h"
+#include "H/segment.h"
+#include "H/tokenize.h"
+#include "H/macro.h"
+#include "H/fastpass.h"
+#include "H/listing.h"
+#include "H/input.h"
+#include "H/msgtext.h"
+#include "H/types.h"
+#include "H/omfspec.h"
 
 #define CODEBYTES 9
 #define OFSSIZE 8
@@ -52,13 +52,13 @@ static const char  szFmtProcStk[] = "  %s %s        %-17s %s %c %04" I32_SPEC "X
 
 enum list_strings {
 #define ltext( index, string ) LS_ ## index,
-#include "ltext.h"
+#include "H/ltext.h"
 #undef ltext
 };
 
 static const char * const strings[] = {
 #define ltext( index, string ) string ,
-#include "ltext.h"
+#include "H/ltext.h"
 #undef ltext
 };
 

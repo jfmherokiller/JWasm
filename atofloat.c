@@ -11,9 +11,9 @@
 #include <float.h>
 #include <math.h>
 
-#include "globals.h"
-#include "tbyte.h"
-#include "atofloat.h"
+#include "H/globals.h"
+#include "H/tbyte.h"
+#include "H/atofloat.h"
 
 #define USESTRTOF 0 /* 0=use strtod() and convert "manually", 1=use strtof() */
 

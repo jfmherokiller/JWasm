@@ -30,18 +30,18 @@
 
 #include <time.h>
 
-#include "globals.h"
-#include "memalloc.h"
-#include "parser.h"
-#include "segment.h"
-#include "extern.h"
-#include "fixup.h"
-#include "fastpass.h"
-#include "myassert.h"
-#include "macro.h"
-#include "types.h"
-#include "proc.h"
-#include "input.h"
+#include "H/globals.h"
+#include "H/memalloc.h"
+#include "H/parser.h"
+#include "H/segment.h"
+#include "H/extern.h"
+#include "H/fixup.h"
+#include "H/fastpass.h"
+#include "H/myassert.h"
+#include "H/macro.h"
+#include "H/types.h"
+#include "H/proc.h"
+#include "H/input.h"
 
 #if defined(__WATCOMC__) && !defined(__FLAT__)
 #define HASH_MAGNITUDE 12  /* for 16bit model */
@@ -170,7 +170,7 @@ static unsigned int hashpjw( const char *s )
 void SymSetCmpFunc( void )
 /************************/
 {
-    SymCmpFunc = ( ModuleInfo.case_sensitive == TRUE ? memcmp : (StrCmpFunc)_memicmp );
+    SymCmpFunc = ( ModuleInfo.case_sensitive == TRUE ? memcmp : (StrCmpFunc) strncasecmp );
     return;
 }
 

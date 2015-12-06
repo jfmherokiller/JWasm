@@ -33,21 +33,21 @@
 #include <time.h>
 #include <sys/stat.h>
 
-#include "globals.h"
-#include "memalloc.h"
-#include "parser.h"
-#include "segment.h"
-#include "mangle.h"
-#include "extern.h"
-#include "fixup.h"
-#include "omf.h"
-#include "omfint.h"
-#include "omfspec.h"
-#include "fastpass.h"
-#include "myassert.h"
-#include "tokenize.h" /* needed because of StringBufferEnd usage */
-#include "input.h"
-#include "linnum.h"
+#include "H/globals.h"
+#include "H/memalloc.h"
+#include "H/parser.h"
+#include "H/segment.h"
+#include "H/mangle.h"
+#include "H/extern.h"
+#include "H/fixup.h"
+#include "H/omf.h"
+#include "H/omfint.h"
+#include "H/omfspec.h"
+#include "H/fastpass.h"
+#include "H/myassert.h"
+#include "H/tokenize.h" /* needed because of StringBufferEnd usage */
+#include "H/input.h"
+#include "H/linnum.h"
 
 #define TRUNCATE 1
 #define MULTIHDR 1     /* write muliple THEADR records (Masm compatible) */

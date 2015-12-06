@@ -30,10 +30,10 @@
 
 #include <ctype.h>
 
-#include "globals.h"
-#include "memalloc.h"
-#include "parser.h"
-#include "mangle.h"
+#include "H/globals.h"
+#include "H/memalloc.h"
+#include "H/parser.h"
+#include "H/mangle.h"
 
 #if MANGLERSUPP
 #if !defined(__GNUC__) && !defined(__POCC__)
