@@ -1210,6 +1210,7 @@ static void pe_set_base_relocs( struct dsym *reloc )
 }
 
 #if AMD64_SUPPORT
+#pragma warning(disable : 4703)
 #define GHF( x ) ( ( ModuleInfo.defOfssize == USE64 ) ? ph64->x : ph32->x )
 #else
 #define GHF( x ) ph32->x
@@ -1301,6 +1302,7 @@ static void pe_set_values( struct calc_param *cp )
 
     }
     SortSegments( 2 );
+
     falign = get_bit( GHF( OptionalHeader.FileAlignment ) );
     malign = GHF( OptionalHeader.SectionAlignment );
 
