@@ -2340,13 +2340,13 @@ static ret_code negative_op( struct expr *opnd1, struct expr *opnd2 )
     MakeConst( opnd2 );
     if( opnd2->kind == EXPR_CONST ) {
         opnd1->kind = EXPR_CONST;
-        opnd1->llvalue = -opnd2->llvalue;
+        opnd1->llvalue = -(int)opnd2->llvalue;
         /* v2.06: the unary '-' operator is to work with
          * magnitudes > 64-bit. Current implementation is
          * a bit hackish.
          */
         if ( opnd2->hlvalue )
-            opnd1->hlvalue = -opnd2->hlvalue - 1;
+            opnd1->hlvalue = -(int)opnd2->hlvalue - 1;
         opnd1->negative = 1 - opnd2->negative; /* ??? supposed to be used for EXPR_FLOAT only! */
     } else if( opnd2->kind == EXPR_FLOAT ) {
         opnd1->kind = EXPR_FLOAT;

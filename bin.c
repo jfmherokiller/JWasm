@@ -226,7 +226,7 @@ static void CalcOffset( struct dsym *curr, struct calc_param *cp )
     else
         align = 1 << curr->e.seginfo->alignment;
     //alignbytes = ((offset + (align - 1)) & (-align)) - offset;
-    alignbytes = ((cp->fileoffset + (align - 1)) & (-align)) - cp->fileoffset;
+    alignbytes = ((cp->fileoffset + (align - 1)) & (-(int)align)) - (int)cp->fileoffset;
     cp->fileoffset += alignbytes;
 
     if ( grp == NULL ) {
@@ -1523,7 +1523,7 @@ static ret_code bin_write_module( struct module_info *modinfo )
     uint_16 reloccnt;
     uint_32 sizemem;
     struct dsym *stack = NULL;
-    uint_8  *hdrbuf;
+    uint_8  *hdrbuf = NULL;
 #endif
     struct calc_param cp = { TRUE, 0 };
 

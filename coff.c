@@ -815,7 +815,7 @@ static uint_32 SetSymbolIndices( struct module_info *ModuleInfo, struct coffmod 
     struct asym  *sym;
     uint_32 index;
     uint_32 i;
-    struct asym *lastfproc;
+    struct asym *lastfproc = NULL;
     unsigned lastfile = 0;
 
     index = 0;

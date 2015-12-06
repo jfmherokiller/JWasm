@@ -13,7 +13,9 @@
 #include "H/globals.h"
 #include "H/msgtext.h"
 #include "H/cmdline.h"
+#if 0
 #include <emscripten.h>
+#endif
 #include "H/input.h" /* GetFNamePart() */
 #define WILDCARDS 0
 #define CATCHBREAK 0
@@ -65,11 +67,13 @@ static void genfailure( int signo )
 int main( int argc, char **argv )
 /*******************************/
 {
+#if 0
     EM_ASM(
            var fs = require('fs');
            FS.mkdir('/out');
            FS.mount(NODEFS, { root: '.' }, '/out');
            );
+#endif
     char    *pEnv;
     int     numArgs = 0;
     int     numFiles = 0;

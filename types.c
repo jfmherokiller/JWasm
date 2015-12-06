@@ -691,7 +691,7 @@ struct asym *CreateStructField( int loc, struct asm_tok tokenarray[], const char
             if ( si->alignment < size )
                 offset = (offset + (si->alignment - 1)) & ( - si->alignment);
             else if ( size )
-                offset = (offset + (size - 1)) & (-(int)size);
+                offset = (offset + (size - 1)) & (size_bitmask(size) ^ 0xFFFFFFFFU);
         }
         /* adjust the struct's current offset + size.
          The field's size is added in UpdateStructSize()

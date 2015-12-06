@@ -62,7 +62,7 @@
 
 #if TRUNCATE
 #if defined(__UNIX__) || defined(__CYGWIN__) || defined(__DJGPP__)
-#include <unistd.h>
+#include "unistd.h"
 
 #else
 #include <sys/io.h>
@@ -1382,7 +1382,7 @@ static ret_code omf_write_pubdef( void )
 
     q = ModuleInfo.g.PubQueue.head;
     while ( q ) {
-        struct asym     *curr_seg;
+        struct asym     *curr_seg = NULL;
         uint_8          *data;
         unsigned        size;
         uint_8          curr32;

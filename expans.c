@@ -129,7 +129,7 @@ static void SkipMacro( struct asm_tok tokenarray[] )
 int RunMacro( struct dsym *macro, int idx, struct asm_tok tokenarray[], char *out, int mflags, bool *is_exitm )
 /*************************************************************************************************************/
 {
-    char        *currparm;
+    char        *currparm = NULL;
     char        *savedStringBuffer = StringBufferEnd;
     int         i;
     //int         start = idx-1;
@@ -140,7 +140,7 @@ int RunMacro( struct dsym *macro, int idx, struct asm_tok tokenarray[], char *ou
     int         parm_end_delim;   /* parameter end delimiter */
     //char        addprefix;
     char        *ptr;
-    char        *parmstrings;
+    char        *parmstrings = NULL;
     struct macro_info *info;
     struct srcline    *lnode;
     struct asym       *sym;

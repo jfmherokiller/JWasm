@@ -29,6 +29,7 @@
 ****************************************************************************/
 int strncasecmp(const char *s1, const char * s2, unsigned n);
 int strcasecmp(const char *s1, const char *s2);
+__int32  size_bitmask(__int32 size);
 #define _CRT_SECURE_NO_WARNINGS 1
 #pragma warning(disable : 4996)
 #ifndef _GLOBALS_H_INCLUDED

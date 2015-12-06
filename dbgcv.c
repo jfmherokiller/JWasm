@@ -474,7 +474,7 @@ static void cv_write_type( struct dbgcv *cv, struct asym *sym )
 /*************************************************************/
 {
     struct dsym *type = (struct dsym *)sym;
-    uint_8      *tmp;
+    uint_8      *tmp = NULL;
     int         namesize;
     int         typelen;
     int         size;
