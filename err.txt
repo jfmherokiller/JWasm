@@ -1,0 +1,1426 @@
+assemble.c:1238:13: warning: add explicit braces to avoid dangling else [-Wdangling-else]
+            else
+            ^
+1 warning generated.
+assume.c:215:13: warning: enumeration value 'MODEL_NONE' not handled in switch [-Wswitch]
+    switch( ModuleInfo.model ) {
+            ^
+assume.c:261:9: warning: add explicit braces to avoid dangling else [-Wdangling-else]
+        else
+        ^
+assume.c:412:104: warning: comparison of constant 'EMPTY' (-2) with expression of type 'enum special_token' is always false [-Wtautological-constant-out-of-range-compare]
+                } else if ( ( opnd.sym->state == SYM_SEG || opnd.sym->state == SYM_GRP ) && opnd.instr == EMPTY ) {
+                                                                                            ~~~~~~~~~~ ^  ~~~~~
+3 warnings generated.
+backptch.c:102:21: warning: 12 enumeration values not handled in switch: 'FIX_VOID', 'FIX_RELOFF8', 'FIX_OFF16'... [-Wswitch]
+            switch( fixup->type ) {
+                    ^
+1 warning generated.
+bin.c:337:22: warning: 12 enumeration values not handled in switch: 'FIX_VOID', 'FIX_RELOFF8', 'FIX_RELOFF16'... [-Wswitch]
+            switch ( fixup->type ) {
+                     ^
+bin.c:1631:14: warning: enumeration values 'SFORMAT_NONE', 'SFORMAT_PE', and 'SFORMAT_64BIT' not handled in switch [-Wswitch]
+    switch ( modinfo->sub_format ) {
+             ^
+bin.c:1836:14: warning: enumeration values 'SFORMAT_NONE' and 'SFORMAT_64BIT' not handled in switch [-Wswitch]
+    switch ( modinfo->sub_format ) {
+             ^
+3 warnings generated.
+branch.c:437:17: warning: 20 enumeration values not handled in switch: 'MT_BYTE', 'MT_WORD', 'MT_DWORD'... [-Wswitch]
+        switch( CodeInfo->mem_type ) {
+                ^
+branch.c:492:17: warning: 21 enumeration values not handled in switch: 'MT_BYTE', 'MT_WORD', 'MT_DWORD'... [-Wswitch]
+        switch( CodeInfo->mem_type ) {
+                ^
+2 warnings generated.
+cmdline.c:757:42: warning: if statement has empty body [-Wempty-body]
+        if ( fread( env, 1, len, file ) );
+                                         ^
+cmdline.c:757:42: note: put the semicolon on a separate line to silence this warning
+1 warning generated.
+codegen.c:148:30: warning: comparison of constant 'EMPTY' (-2) with expression of type 'enum instr_token' is always true [-Wtautological-constant-out-of-range-compare]
+    if( CodeInfo->prefix.ins != EMPTY ) {
+        ~~~~~~~~~~~~~~~~~~~~ ^  ~~~~~
+codegen.c:755:17: warning: add explicit braces to avoid dangling else [-Wdangling-else]
+                else if ( ( opnd1 & ( OP_RGT16 | OP_MGT16 ) ) && (int_8)CodeInfo->opnd[OPND2].data32l == (int_32)CodeInfo->opnd[OPND2].data32l )
+                ^
+2 warnings generated.
+coff.c:182:39: warning: format specifies type 'unsigned int' but the argument has type 'uint_32' (aka 'unsigned long') [-Wformat]
+            sprintf( ish.Name, "/%u", Coff_AllocString( cm, secname, len ) );
+                                 ~~   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                 %lu
+coff.c:449:18: warning: passing 'uint_8 [8]' to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+        strncpy( is.N.ShortName, ".file", IMAGE_SIZEOF_SHORT_NAME );
+                 ^~~~~~~~~~~~~~
+/Users/jfmmeyers/Downloads/emsdk_portable/emscripten/1.35.0/system/include/libc/string.h:32:32: note: passing argument to parameter here
+char *strncpy (char *__restrict, const char *__restrict, size_t);
+                               ^
+coff.c:462:22: warning: passing 'uint_8 [18]' to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+            strncpy( ias.File.Name, p, sizeof(IMAGE_AUX_SYMBOL) );
+                     ^~~~~~~~~~~~~
+/Users/jfmmeyers/Downloads/emsdk_portable/emscripten/1.35.0/system/include/libc/string.h:32:32: note: passing argument to parameter here
+char *strncpy (char *__restrict, const char *__restrict, size_t);
+                               ^
+coff.c:476:22: warning: passing 'uint_8 [8]' to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+            strncpy( is.N.ShortName, p, IMAGE_SIZEOF_SHORT_NAME );
+                     ^~~~~~~~~~~~~~
+/Users/jfmmeyers/Downloads/emsdk_portable/emscripten/1.35.0/system/include/libc/string.h:32:32: note: passing argument to parameter here
+char *strncpy (char *__restrict, const char *__restrict, size_t);
+                               ^
+coff.c:556:22: warning: passing 'uint_8 [8]' to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+            strncpy( is.N.ShortName, buffer, IMAGE_SIZEOF_SHORT_NAME );
+                     ^~~~~~~~~~~~~~
+/Users/jfmmeyers/Downloads/emsdk_portable/emscripten/1.35.0/system/include/libc/string.h:32:32: note: passing argument to parameter here
+char *strncpy (char *__restrict, const char *__restrict, size_t);
+                               ^
+coff.c:594:22: warning: passing 'uint_8 [8]' to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+            strncpy( is.N.ShortName, ".file", IMAGE_SIZEOF_SHORT_NAME );
+                     ^~~~~~~~~~~~~~
+/Users/jfmmeyers/Downloads/emsdk_portable/emscripten/1.35.0/system/include/libc/string.h:32:32: note: passing argument to parameter here
+char *strncpy (char *__restrict, const char *__restrict, size_t);
+                               ^
+coff.c:604:26: warning: passing 'uint_8 [18]' to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+                strncpy( ias.File.Name, p, sizeof(IMAGE_AUX_SYMBOL) );
+                         ^~~~~~~~~~~~~
+/Users/jfmmeyers/Downloads/emsdk_portable/emscripten/1.35.0/system/include/libc/string.h:32:32: note: passing argument to parameter here
+char *strncpy (char *__restrict, const char *__restrict, size_t);
+                               ^
+coff.c:636:22: warning: passing 'uint_8 [8]' to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+            strncpy( is.N.ShortName, buffer, IMAGE_SIZEOF_SHORT_NAME );
+                     ^~~~~~~~~~~~~~
+/Users/jfmmeyers/Downloads/emsdk_portable/emscripten/1.35.0/system/include/libc/string.h:32:32: note: passing argument to parameter here
+char *strncpy (char *__restrict, const char *__restrict, size_t);
+                               ^
+coff.c:661:22: warning: passing 'uint_8 [8]' to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+            strncpy( is.N.ShortName, ".bf", IMAGE_SIZEOF_SHORT_NAME );
+                     ^~~~~~~~~~~~~~
+/Users/jfmmeyers/Downloads/emsdk_portable/emscripten/1.35.0/system/include/libc/string.h:32:32: note: passing argument to parameter here
+char *strncpy (char *__restrict, const char *__restrict, size_t);
+                               ^
+coff.c:676:22: warning: passing 'uint_8 [8]' to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+            strncpy( is.N.ShortName, ".lf", IMAGE_SIZEOF_SHORT_NAME );
+                     ^~~~~~~~~~~~~~
+/Users/jfmmeyers/Downloads/emsdk_portable/emscripten/1.35.0/system/include/libc/string.h:32:32: note: passing argument to parameter here
+char *strncpy (char *__restrict, const char *__restrict, size_t);
+                               ^
+coff.c:684:22: warning: passing 'uint_8 [8]' to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+            strncpy( is.N.ShortName, ".ef", IMAGE_SIZEOF_SHORT_NAME );
+                     ^~~~~~~~~~~~~~
+/Users/jfmmeyers/Downloads/emsdk_portable/emscripten/1.35.0/system/include/libc/string.h:32:32: note: passing argument to parameter here
+char *strncpy (char *__restrict, const char *__restrict, size_t);
+                               ^
+coff.c:708:22: warning: passing 'uint_8 [8]' to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+            strncpy( is.N.ShortName, buffer, IMAGE_SIZEOF_SHORT_NAME );
+                     ^~~~~~~~~~~~~~
+/Users/jfmmeyers/Downloads/emsdk_portable/emscripten/1.35.0/system/include/libc/string.h:32:32: note: passing argument to parameter here
+char *strncpy (char *__restrict, const char *__restrict, size_t);
+                               ^
+coff.c:1334:29: warning: passing 'uint_8 *' (aka 'unsigned char *') to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+                    strcpy( p, "-import:" );
+                            ^
+/Users/jfmmeyers/Downloads/emsdk_portable/emscripten/1.35.0/system/include/libc/string.h:31:31: note: passing argument to parameter here
+char *strcpy (char *__restrict, const char *__restrict);
+                              ^
+coff.c:1336:45: warning: passing 'uint_8 *' (aka 'unsigned char *') to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+                    p += Mangle( &tmp->sym, p );
+                                            ^
+H/mangle.h:34:43: note: passing argument to parameter here
+extern int  Mangle( struct asym *, char * );
+                                          ^
+coff.c:1338:29: warning: passing 'uint_8 *' (aka 'unsigned char *') to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+                    strcpy( p, tmp->sym.dll->name );
+                            ^
+/Users/jfmmeyers/Downloads/emsdk_portable/emscripten/1.35.0/system/include/libc/string.h:31:31: note: passing argument to parameter here
+char *strcpy (char *__restrict, const char *__restrict);
+                              ^
+coff.c:1339:34: warning: passing 'uint_8 *' (aka 'unsigned char *') to parameter of type 'const char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+                    p += strlen( p );
+                                 ^
+/Users/jfmmeyers/Downloads/emsdk_portable/emscripten/1.35.0/system/include/libc/string.h:52:28: note: passing argument to parameter here
+size_t strlen (const char *);
+                           ^
+coff.c:1395:53: warning: assigning to 'uint_8 *' (aka 'unsigned char *') from 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+            cm.SymDeb[i].seg->e.seginfo->CodeBuffer = CurrSource + i * SIZE_CV_SEGBUF;
+                                                    ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+17 warnings generated.
+context.c:162:26: warning: enumeration value 'CONT_ALL' not handled in switch [-Wswitch]
+                switch ( curr->type ) {
+                         ^
+context.c:209:30: warning: enumeration value 'CONT_ALL' not handled in switch [-Wswitch]
+                    switch ( typetab[j] ) {
+                             ^
+context.c:126:19: warning: comparison of constant -1 with expression of type 'enum context_type' is always false [-Wtautological-constant-out-of-range-compare]
+        if ( type == -1 )
+             ~~~~ ^  ~~
+context.c:242:49: warning: comparison of constant -1 with expression of type 'enum context_type' is always false [-Wtautological-constant-out-of-range-compare]
+    if ( tokenarray[i].token != T_FINAL || type == -1 ) {
+                                           ~~~~ ^  ~~
+4 warnings generated.
+cpumodel.c:336:22: warning: enumeration values 'OFORMAT_BIN' and 'OFORMAT_OMF' not handled in switch [-Wswitch]
+            switch ( Options.output_format ) {
+                     ^
+cpumodel.c:441:11: warning: add explicit braces to avoid dangling else [-Wdangling-else]
+        } else
+          ^
+2 warnings generated.
+data.c:363:17: warning: add explicit braces to avoid dangling else [-Wdangling-else]
+                else {
+                ^
+data.c:441:22: warning: passing 'char [32]' to parameter of type 'const unsigned char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+    OutputDataBytes( buffer, size );
+                     ^~~~~~
+data.c:62:46: note: expanded from macro 'OutputDataBytes'
+#define OutputDataBytes( x, y ) OutputBytes( x, y, NULL )
+                                             ^
+H/globals.h:861:59: note: passing argument to parameter here
+extern void             OutputBytes( const unsigned char *, int len, struct fixup * );
+                                                          ^
+data.c:727:27: warning: assigning to 'uint_8 *' (aka 'unsigned char *') from 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+                    pchar = little_endian( (const char *)pchar, string_len );
+                          ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+data.c:1229:31: warning: add explicit braces to avoid dangling else [-Wdangling-else]
+            if ( StoreState ) FStoreLine(0);
+                              ^
+H/fastpass.h:83:92: note: expanded from macro 'FStoreLine'
+#define FStoreLine( flags ) if ( Parse_Pass == PASS_1 ) StoreLine( CurrSource, flags, 0 ); else
+                                                                                           ^
+4 warnings generated.
+dbgcv.c:130:18: warning: 18 enumeration values not handled in switch: 'MT_BYTE', 'MT_WORD', 'MT_DWORD'... [-Wswitch]
+        switch ( sym->mem_type ) {
+                 ^
+dbgcv.c:209:14: warning: unsequenced modification and access to 'curr' [-Wunsequenced]
+        *curr++ = padtab[3-((curr - base) & 3)];
+             ^               ~~~~
+dbgcv.c:1067:18: warning: 10 enumeration values not handled in switch: 'SYM_UNDEFINED', 'SYM_EXTERNAL', 'SYM_SEG'... [-Wswitch]
+        switch ( sym->state ) {
+                 ^
+3 warnings generated.
+equate.c:171:37: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if( opnd.kind != EXPR_CONST &&
+            ~~~~~~~~~~~~~~~~~~~~~~~~^~
+equate.c:171:37: note: place parentheses around the '&&' expression to silence this warning
+        if( opnd.kind != EXPR_CONST &&
+                                    ^
+equate.c:181:44: warning: add explicit braces to avoid dangling else [-Wdangling-else]
+                if ( StoreState == FALSE ) FStoreLine(0); /* make sure this line is evaluated in pass two */
+                                           ^
+H/fastpass.h:83:92: note: expanded from macro 'FStoreLine'
+#define FStoreLine( flags ) if ( Parse_Pass == PASS_1 ) StoreLine( CurrSource, flags, 0 ); else
+                                                                                           ^
+equate.c:452:22: warning: comparison of constant 'EMPTY' (-2) with expression of type 'enum special_token' is always false [-Wtautological-constant-out-of-range-compare]
+        ( opnd.instr == EMPTY ) ) {
+          ~~~~~~~~~~ ^  ~~~~~
+3 warnings generated.
+expans.c:313:29: warning: add explicit braces to avoid dangling else [-Wdangling-else]
+                            else if ( tokenarray[i].token == T_CL_BRACKET ) {
+                            ^
+1 warning generated.
+expreval.c:269:14: warning: 21 enumeration values not handled in switch: 'MT_BYTE', 'MT_WORD', 'MT_DWORD'... [-Wswitch]
+    switch ( mem_type ) {
+             ^
+expreval.c:397:46: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if( ( ( GetCpuSp( j ) & P_EXT_MASK ) &&
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+expreval.c:397:46: note: place parentheses around the '&&' expression to silence this warning
+        if( ( ( GetCpuSp( j ) & P_EXT_MASK ) &&
+                                             ^
+expreval.c:871:65: warning: comparison of constant 'EMPTY' (-2) with expression of type 'enum special_token' is always false [-Wtautological-constant-out-of-range-compare]
+        if ( ( opnd->sym->state == SYM_UNDEFINED && opnd->instr == EMPTY ) ||
+                                                    ~~~~~~~~~~~ ^  ~~~~~
+expreval.c:956:37: warning: '&&' within '||' [-Wlogical-op-parentheses]
+    if( ( opnd1->kind == EXPR_REG ) && ( opnd1->indirect == FALSE )
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+expreval.c:956:37: note: place parentheses around the '&&' expression to silence this warning
+    if( ( opnd1->kind == EXPR_REG ) && ( opnd1->indirect == FALSE )
+                                    ^
+        (                                                          )
+expreval.c:957:40: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        || ( opnd2->kind == EXPR_REG ) && ( opnd2->indirect == FALSE ) ) {
+        ~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+expreval.c:957:40: note: place parentheses around the '&&' expression to silence this warning
+        || ( opnd2->kind == EXPR_REG ) && ( opnd2->indirect == FALSE ) ) {
+                                       ^
+           (                                                          )
+expreval.c:1149:22: warning: 364 enumeration values not handled in switch: 'T_NULL', 'T_AL', 'T_CL'... [-Wswitch]
+            switch ( opnd2->instr ) {
+                     ^
+expreval.c:1143:22: warning: comparison of constant 'EMPTY' (-2) with expression of type 'enum special_token' is always true [-Wtautological-constant-out-of-range-compare]
+    if( opnd2->instr != EMPTY && opnd2->mem_type != MT_EMPTY ) {
+        ~~~~~~~~~~~~ ^  ~~~~~
+expreval.c:1147:22: warning: comparison of constant 'EMPTY' (-2) with expression of type 'enum special_token' is always true [-Wtautological-constant-out-of-range-compare]
+    if( opnd2->instr != EMPTY ) {
+        ~~~~~~~~~~~~ ^  ~~~~~
+expreval.c:1362:56: warning: comparison of constant 'EMPTY' (-2) with expression of type 'enum special_token' is always false [-Wtautological-constant-out-of-range-compare]
+        (( opnd2->mem_type == MT_EMPTY && opnd2->instr == EMPTY ) ||
+                                          ~~~~~~~~~~~~ ^  ~~~~~
+expreval.c:1757:31: warning: comparison of constant 'EMPTY' (-2) with expression of type 'enum special_token' is always true [-Wtautological-constant-out-of-range-compare]
+            if ( opnd2->instr != EMPTY )
+                 ~~~~~~~~~~~~ ^  ~~~~~
+expreval.c:2199:14: warning: 4 enumeration values not handled in switch: 'EXPR_EMPTY', 'EXPR_ERROR', 'EXPR_CONST'... [-Wswitch]
+    switch ( opnd2->kind ) {
+             ^
+expreval.c:2271:28: warning: comparison of constant 'EMPTY' (-2) with expression of type 'enum special_token' is always false [-Wtautological-constant-out-of-range-compare]
+              opnd1->instr == EMPTY &&
+              ~~~~~~~~~~~~ ^  ~~~~~
+expreval.c:2969:18: warning: enumeration values 'EXPR_EMPTY' and 'EXPR_ERROR' not handled in switch [-Wswitch]
+        switch ( opnd2->kind ) {
+                 ^
+expreval.c:2960:27: warning: comparison of constant 'EMPTY' (-2) with expression of type 'enum special_token' is always true [-Wtautological-constant-out-of-range-compare]
+        if ( opnd2->instr != EMPTY )
+             ~~~~~~~~~~~~ ^  ~~~~~
+14 warnings generated.
+extern.c:364:15: warning: add explicit braces to avoid dangling else [-Wdangling-else]
+            } else {
+              ^
+extern.c:662:15: warning: add explicit braces to avoid dangling else [-Wdangling-else]
+            } else {
+              ^
+extern.c:975:15: warning: add explicit braces to avoid dangling else [-Wdangling-else]
+            } else {
+              ^
+3 warnings generated.
+fixup.c:154:18: warning: 8 enumeration values not handled in switch: 'SYM_UNDEFINED', 'SYM_STACK', 'SYM_STRUCT_FIELD'... [-Wswitch]
+        switch ( sym->state ) {
+                 ^
+1 warning generated.
+hll.c:244:30: warning: format specifies type 'unsigned int' but the argument has type 'int_32' (aka 'long') [-Wformat]
+    sprintf( buff, LABELFMT, label );
+                             ^~~~~
+hll.c:408:14: warning: 4 enumeration values not handled in switch: 'EXPR_ERROR', 'EXPR_CONST', 'EXPR_ADDR'... [-Wswitch]
+    switch ( op1.kind ) {
+             ^
+hll.c:447:58: warning: format specifies type 'unsigned int' but the argument has type 'uint_32' (aka 'unsigned long') [-Wformat]
+                sprintf( buffer, "jmp " LABELFMT EOLSTR, label );
+                                                         ^~~~~
+hll.c:418:18: warning: enumeration values 'EXPR_EMPTY', 'EXPR_ERROR', and 'EXPR_FLOAT' not handled in switch [-Wswitch]
+        switch ( op1.kind ) {
+                 ^
+4 warnings generated.
+input.c:495:142: warning: format specifies type 'unsigned int' but the argument has type 'uint_32' (aka 'unsigned long') [-Wformat]
+            return( sprintf( buffer, ModuleInfo.EndDirFound == FALSE ? "%s(%" I32_SPEC "u) : " : "%s : ", GetFName( curr->srcfile )->fname , curr->line_num ) );
+                                                                           ~~~~~~~~~~~~~~                                                    ^~~~~~~~~~~~~~
+                                                                           %lu
+input.c:495:142: warning: data argument not used by format string [-Wformat-extra-args]
+            return( sprintf( buffer, ModuleInfo.EndDirFound == FALSE ? "%s(%" I32_SPEC "u) : " : "%s : ", GetFName( curr->srcfile )->fname , curr->line_num ) );
+                                                                                                 ~~~~~~~                                     ^
+2 warnings generated.
+invoke.c:1052:39: warning: add explicit braces to avoid dangling else [-Wdangling-else]
+                                    } else
+                                      ^
+invoke.c:1268:39: warning: add explicit braces to avoid dangling else [-Wdangling-else]
+                                    } else if (!( *r0flags & R0_H_CLEARED )) {
+                                      ^
+invoke.c:1326:23: warning: add explicit braces to avoid dangling else [-Wdangling-else]
+                    } else
+                      ^
+invoke.c:919:33: warning: comparison of constant 'EMPTY' (-2) with expression of type 'enum special_token' is always false [-Wtautological-constant-out-of-range-compare]
+                     opnd.instr == EMPTY &&
+                     ~~~~~~~~~~ ^  ~~~~~
+invoke.c:1551:92: warning: for loop has empty body [-Wempty-body]
+    for ( curr = info->paralist, numParam = 0 ; curr ; curr = curr->nextparam, numParam++ );
+                                                                                           ^
+invoke.c:1551:92: note: put the semicolon on a separate line to silence this warning
+5 warnings generated.
+label.c:282:15: warning: add explicit braces to avoid dangling else [-Wdangling-else]
+            } else
+              ^
+1 warning generated.
+listing.c:160:18: warning: enumeration value 'LM_LISTMACROALL' not handled in switch [-Wswitch]
+        switch ( ModuleInfo.list_macro ) {
+                 ^
+listing.c:203:49: warning: format specifies type 'unsigned int' but the argument has type 'uint_32' (aka 'unsigned long') [-Wformat]
+        sprintf( ll.buffer, "%08" I32_SPEC "X", oldofs );
+                             ~~~~~~~~~~~~~~~~   ^~~~~~
+                             %08lX
+listing.c:264:53: warning: format specifies type 'unsigned int' but the argument has type 'uint_32' (aka 'unsigned long') [-Wformat]
+            sprintf( ll.buffer, "%08" I32_SPEC "X", GetCurrOffset() );
+                                 ~~~~~~~~~~~~~~~~   ^~~~~~~~~~~~~~~
+                                 %08lX
+listing.c:273:71: warning: format specifies type 'unsigned int' but the argument has type 'int_32' (aka 'long') [-Wformat]
+            sprintf( &ll.buffer[idx+2], "%-" PREFFMTSTR I32_SPEC "X", sym->value );
+                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~   ^~~~~~~~~~
+                                         %-25lX
+listing.c:300:49: warning: format specifies type 'unsigned int' but the argument has type 'uint_32' (aka 'unsigned long') [-Wformat]
+        sprintf( ll.buffer, "%08" I32_SPEC "X", oldofs );
+                             ~~~~~~~~~~~~~~~~   ^~~~~~
+                             %08lX
+listing.c:305:53: warning: format specifies type 'unsigned int' but the argument has type 'uint_32' (aka 'unsigned long') [-Wformat]
+            sprintf( ll.buffer, "%08" I32_SPEC "X", oldofs );
+                                 ~~~~~~~~~~~~~~~~   ^~~~~~
+                                 %08lX
+listing.c:507:14: warning: 18 enumeration values not handled in switch: 'MT_BYTE', 'MT_WORD', 'MT_DWORD'... [-Wswitch]
+    switch ( mem_type ) {
+             ^
+listing.c:768:13: warning: 21 enumeration values not handled in switch: 'MT_BYTE', 'MT_WORD', 'MT_DWORD'... [-Wswitch]
+    switch( sym->mem_type ) {
+            ^
+listing.c:903:89: warning: format specifies type 'unsigned int' but the argument has type 'uint_32' (aka 'unsigned long') [-Wformat]
+                sprintf( buffer, "%s[%" I32_SPEC "u]", GetMemtypeString(&l->sym, NULL), l->sym.total_length );
+                                     ~~~~~~~~~~~~~~                                     ^~~~~~~~~~~~~~~~~~~
+                                     %lu
+listing.c:963:84: warning: format specifies type 'unsigned int' but the argument has type 'uint_32' (aka 'unsigned long') [-Wformat]
+            i = sprintf( StringBufferEnd, "%s[%u]", GetMemtypeString( sym, NULL ), sym->total_length );
+                                              ~~                                   ^~~~~~~~~~~~~~~~~
+                                              %lu
+listing.c:956:14: warning: 7 enumeration values not handled in switch: 'SYM_SEG', 'SYM_GRP', 'SYM_STACK'... [-Wswitch]
+    switch ( sym->state ) {
+             ^
+11 warnings generated.
+macro.c:97:45: warning: format specifies type 'unsigned int' but the argument has type 'uint_32' (aka 'unsigned long') [-Wformat]
+                    i = sprintf( dst, "%X", i );
+                                       ~~   ^
+                                       %lX
+1 warning generated.
+omf.c:358:40: warning: assigning to 'uint_8 *' (aka 'unsigned char *') from 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+    for( node = LinnumQueue.head, data = StringBufferEnd; node; node = next ) {
+                                       ^ ~~~~~~~~~~~~~~~
+omf.c:372:27: warning: passing 'char *' to parameter of type 'uint_8 *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+        AttachData( &obj, StringBufferEnd, size );
+                          ^~~~~~~~~~~~~~~
+H/globals.h:829:25: note: expanded from macro 'StringBufferEnd'
+#define StringBufferEnd ModuleInfo.stringbufferend
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+omf.c:256:55: note: passing argument to parameter 'data' here
+static void AttachData( struct omf_rec *objr, uint_8 *data, size_t len )
+                                                      ^
+omf.c:387:38: warning: implicit conversion from enumeration type 'enum fixgen_types' to different enumeration type 'enum fixup_types' [-Wenum-conversion]
+    enum fixup_types type = ( is32 ? FIX_GEN_MS386 : FIX_GEN_INTEL );
+                     ~~~~            ^~~~~~~~~~~~~
+omf.c:387:54: warning: implicit conversion from enumeration type 'enum fixgen_types' to different enumeration type 'enum fixup_types' [-Wenum-conversion]
+    enum fixup_types type = ( is32 ? FIX_GEN_MS386 : FIX_GEN_INTEL );
+                     ~~~~                            ^~~~~~~~~~~~~
+omf.c:392:19: warning: assigning to 'uint_8 *' (aka 'unsigned char *') from 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+        for( data = StringBufferEnd, size = 0; fix; fix = fix->nextrlc ) {
+                  ^ ~~~~~~~~~~~~~~~
+omf.c:405:73: warning: implicit conversion from enumeration type 'enum fixup_types' to different enumeration type 'enum fixgen_types' [-Wenum-conversion]
+            data += OmfFixGenFix( fix, seg->e.seginfo->start_loc, data, type );
+                    ~~~~~~~~~~~~                                        ^~~~
+omf.c:411:31: warning: passing 'char *' to parameter of type 'uint_8 *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+            AttachData( &obj, StringBufferEnd, size );
+                              ^~~~~~~~~~~~~~~
+H/globals.h:829:25: note: expanded from macro 'StringBufferEnd'
+#define StringBufferEnd ModuleInfo.stringbufferend
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+omf.c:256:55: note: passing argument to parameter 'data' here
+static void AttachData( struct omf_rec *objr, uint_8 *data, size_t len )
+                                                      ^
+omf.c:439:35: warning: passing 'char *' to parameter of type 'uint_8 *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+                AttachData( &obj, StringBufferEnd, 2 * sizeof( uint_16 ) );
+                                  ^~~~~~~~~~~~~~~
+H/globals.h:829:25: note: expanded from macro 'StringBufferEnd'
+#define StringBufferEnd ModuleInfo.stringbufferend
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+omf.c:256:55: note: passing argument to parameter 'data' here
+static void AttachData( struct omf_rec *objr, uint_8 *data, size_t len )
+                                                      ^
+omf.c:541:23: warning: passing 'char *' to parameter of type 'uint_8 *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+    AttachData( &obj, StringBufferEnd, len + 1 );
+                      ^~~~~~~~~~~~~~~
+H/globals.h:829:25: note: expanded from macro 'StringBufferEnd'
+#define StringBufferEnd ModuleInfo.stringbufferend
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+omf.c:256:55: note: passing argument to parameter 'data' here
+static void AttachData( struct omf_rec *objr, uint_8 *data, size_t len )
+                                                      ^
+omf.c:737:18: warning: assigning to 'uint_8 *' (aka 'unsigned char *') from 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+            data = StringBufferEnd;
+                 ^ ~~~~~~~~~~~~~~~
+omf.c:749:42: warning: passing 'uint_8 *' (aka 'unsigned char *') to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+                len = Mangle( &dir->sym, data+3 );
+                                         ^~~~~~
+H/mangle.h:34:43: note: passing argument to parameter here
+extern int  Mangle( struct asym *, char * );
+                                          ^
+omf.c:751:25: warning: passing 'uint_8 *' (aka 'unsigned char *') to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+                strcpy( data+3, dir->sym.name );
+                        ^~~~~~
+/Users/jfmmeyers/Downloads/emsdk_portable/emscripten/1.35.0/system/include/libc/string.h:31:31: note: passing argument to parameter here
+char *strcpy (char *__restrict, const char *__restrict);
+                              ^
+omf.c:756:26: warning: passing 'uint_8 *' (aka 'unsigned char *') to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+                _strupr( data+3 );
+                         ^~~~~~
+H/globals.h:44:28: note: passing argument to parameter here
+extern char * strupr(char *);
+                           ^
+omf.c:806:27: warning: passing 'char *' to parameter of type 'uint_8 *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+        AttachData( &grp, StringBufferEnd, 2 + 3 * curr->e.grpinfo->numseg );
+                          ^~~~~~~~~~~~~~~
+H/globals.h:829:25: note: expanded from macro 'StringBufferEnd'
+#define StringBufferEnd ModuleInfo.stringbufferend
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+omf.c:256:55: note: passing argument to parameter 'data' here
+static void AttachData( struct omf_rec *objr, uint_8 *data, size_t len )
+                                                      ^
+omf.c:969:22: warning: passing 'unsigned char *' to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+            _strupr( p );
+                     ^
+H/globals.h:44:28: note: passing argument to parameter here
+extern char * strupr(char *);
+                           ^
+omf.c:1061:32: warning: passing 'unsigned char [256]' to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+            len = Mangle( sym, buffer );
+                               ^~~~~~
+H/mangle.h:34:43: note: passing argument to parameter here
+extern int  Mangle( struct asym *, char * );
+                                          ^
+omf.c:1067:26: warning: passing 'unsigned char [256]' to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+                _strupr( buffer );
+                         ^~~~~~
+H/globals.h:44:28: note: passing argument to parameter here
+extern char * strupr(char *);
+                           ^
+omf.c:1222:47: warning: passing 'char *' to parameter of type 'uint_8 *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+                numsize += put_comdef_number( &number[1], curr->sym.total_length );
+                                              ^~~~~~~~~~
+omf.c:1149:44: note: passing argument to parameter 'buffer' here
+static unsigned put_comdef_number( uint_8 *buffer, uint_32 value )
+                                           ^
+omf.c:1223:47: warning: passing 'char *' to parameter of type 'uint_8 *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+                numsize += put_comdef_number( &number[numsize], varsize );
+                                              ^~~~~~~~~~~~~~~~
+omf.c:1149:44: note: passing argument to parameter 'buffer' here
+static unsigned put_comdef_number( uint_8 *buffer, uint_32 value )
+                                           ^
+omf.c:1228:47: warning: passing 'char *' to parameter of type 'uint_8 *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+                numsize += put_comdef_number( &number[1], curr->sym.total_length * varsize );
+                                              ^~~~~~~~~~
+omf.c:1149:44: note: passing argument to parameter 'buffer' here
+static unsigned put_comdef_number( uint_8 *buffer, uint_32 value )
+                                           ^
+omf.c:1340:11: warning: assigning to 'char *' from 'unsigned char [496]' converts between pointers to integer types with different sign [-Wpointer-sign]
+        p = buff;
+          ^ ~~~~
+omf.c:1391:30: warning: assigning to 'uint_8 *' (aka 'unsigned char *') from 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+        for ( size = 0, data = StringBufferEnd; q; q = q->next ) {
+                             ^ ~~~~~~~~~~~~~~~
+omf.c:1409:39: warning: passing 'char *' to parameter of type 'uint_8 *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+                    AttachData( &obj, StringBufferEnd, len + 1 );
+                                      ^~~~~~~~~~~~~~~
+H/globals.h:829:25: note: expanded from macro 'StringBufferEnd'
+#define StringBufferEnd ModuleInfo.stringbufferend
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+omf.c:256:55: note: passing argument to parameter 'data' here
+static void AttachData( struct omf_rec *objr, uint_8 *data, size_t len )
+                                                      ^
+omf.c:1438:32: warning: passing 'uint_8 *' (aka 'unsigned char *') to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+            len = Mangle( sym, data + 1 );
+                               ^~~~~~~~
+H/mangle.h:34:43: note: passing argument to parameter here
+extern int  Mangle( struct asym *, char * );
+                                          ^
+omf.c:1444:26: warning: passing 'uint_8 *' (aka 'unsigned char *') to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+                _strupr( data + 1 );
+                         ^~~~~~~~
+H/globals.h:44:28: note: passing argument to parameter here
+extern char * strupr(char *);
+                           ^
+omf.c:1463:31: warning: passing 'char *' to parameter of type 'uint_8 *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+            AttachData( &obj, StringBufferEnd, size );
+                              ^~~~~~~~~~~~~~~
+H/globals.h:829:25: note: expanded from macro 'StringBufferEnd'
+#define StringBufferEnd ModuleInfo.stringbufferend
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+omf.c:256:55: note: passing argument to parameter 'data' here
+static void AttachData( struct omf_rec *objr, uint_8 *data, size_t len )
+                                                      ^
+omf.c:1534:23: warning: passing 'char [4]' to parameter of type 'uint_8 *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+    AttachData( &obj, "\001CV", 3 );
+                      ^~~~~~~~
+omf.c:256:55: note: passing argument to parameter 'data' here
+static void AttachData( struct omf_rec *objr, uint_8 *data, size_t len )
+                                                      ^
+omf.c:1551:56: warning: assigning to 'uint_8 *' (aka 'unsigned char *') from 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+        SymDebSeg[DBGS_SYMBOLS]->e.seginfo->CodeBuffer = CurrSource;
+                                                       ^ ~~~~~~~~~~
+omf.c:1552:54: warning: assigning to 'uint_8 *' (aka 'unsigned char *') from 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+        SymDebSeg[DBGS_TYPES]->e.seginfo->CodeBuffer = CurrSource + 1024;
+                                                     ^ ~~~~~~~~~~~~~~~~~
+omf.c:1592:33: warning: if statement has empty body [-Wempty-body]
+    if ( ftruncate( fh, size ) ); /* gcc warns if return value of ftruncate() is "ignored" */
+                                ^
+omf.c:1592:33: note: put the semicolon on a separate line to silence this warning
+30 warnings generated.
+parser.c:405:40: warning: implicit conversion from enumeration type 'ret_code' to different enumeration type 'enum assume_segreg' [-Wenum-conversion]
+        CodeInfo->prefix.RegOverride = EMPTY; /* skip segment override */
+                                     ~ ^~~~~
+parser.c:453:40: warning: implicit conversion from enumeration type 'ret_code' to different enumeration type 'enum assume_segreg' [-Wenum-conversion]
+        CodeInfo->prefix.RegOverride = EMPTY;
+                                     ~ ^~~~~
+parser.c:839:14: warning: 990 enumeration values not handled in switch: 'INS_FIRST_1', 'T_CALL', 'T_JMP'... [-Wswitch]
+    switch ( CodeInfo->token ) {
+             ^
+parser.c:944:22: warning: 369 enumeration values not handled in switch: 'T_NULL', 'T_AL', 'T_CL'... [-Wswitch]
+            switch ( opndx->instr ) {
+                     ^
+parser.c:1020:26: warning: case value not in enumerated type 'enum special_token' [-Wswitch]
+                    case EMPTY:
+                         ^
+parser.c:1019:29: warning: 369 enumeration values not handled in switch: 'T_NULL', 'T_AL', 'T_CL'... [-Wswitch]
+                    switch( opndx->instr ) {
+                            ^
+parser.c:1010:22: warning: 990 enumeration values not handled in switch: 'INS_FIRST_1', 'T_CALL', 'T_JMP'... [-Wswitch]
+            switch ( CodeInfo->token ) {
+                     ^
+parser.c:943:49: warning: comparison of constant 'EMPTY' (-2) with expression of type 'enum special_token' is always true [-Wtautological-constant-out-of-range-compare]
+        if( Parse_Pass > PASS_1 && opndx->instr != EMPTY ) {
+                                   ~~~~~~~~~~~~ ^  ~~~~~
+parser.c:1134:72: warning: comparison of constant 'EMPTY' (-2) with expression of type 'enum special_token' is always false [-Wtautological-constant-out-of-range-compare]
+        if ( CodeInfo->opnd[CurrOpnd].type == OP_I64 && ( opndx->instr == EMPTY || opndx->instr == T_OFFSET ) )
+                                                          ~~~~~~~~~~~~ ^  ~~~~~
+parser.c:1458:14: warning: 991 enumeration values not handled in switch: 'INS_FIRST_1', 'T_JA', 'T_JAE'... [-Wswitch]
+    switch ( CodeInfo->token ) {
+             ^
+parser.c:1532:18: warning: 989 enumeration values not handled in switch: 'INS_FIRST_1', 'T_CALL', 'T_JMP'... [-Wswitch]
+        switch ( CodeInfo->token ) {
+                 ^
+parser.c:1721:13: warning: add explicit braces to avoid dangling else [-Wdangling-else]
+            else if ( opndx->instr == T_SECTIONREL )
+            ^
+parser.c:1782:29: warning: comparison of constant 'EMPTY' (-2) with expression of type 'enum special_token' is always true [-Wtautological-constant-out-of-range-compare]
+    } else if( opndx->instr != EMPTY ) {
+               ~~~~~~~~~~~~ ^  ~~~~~
+parser.c:1976:13: warning: add explicit braces to avoid dangling else [-Wdangling-else]
+            else
+            ^
+parser.c:2130:56: warning: implicit conversion from enumeration type 'ret_code' to different enumeration type 'enum assume_segreg' [-Wenum-conversion]
+                        CodeInfo->prefix.RegOverride = EMPTY;
+                                                     ~ ^~~~~
+parser.c:2139:48: warning: implicit conversion from enumeration type 'ret_code' to different enumeration type 'enum assume_segreg' [-Wenum-conversion]
+                CodeInfo->prefix.RegOverride = EMPTY;
+                                             ~ ^~~~~
+parser.c:2168:48: warning: implicit conversion from enumeration type 'ret_code' to different enumeration type 'enum assume_segreg' [-Wenum-conversion]
+                CodeInfo->prefix.RegOverride = EMPTY;
+                                             ~ ^~~~~
+parser.c:2167:13: warning: add explicit braces to avoid dangling else [-Wdangling-else]
+            else if ( CodeInfo->prefix.RegOverride == ASSUME_DS )
+            ^
+parser.c:2176:44: warning: implicit conversion from enumeration type 'ret_code' to different enumeration type 'enum assume_segreg' [-Wenum-conversion]
+            CodeInfo->prefix.RegOverride = EMPTY;
+                                         ~ ^~~~~
+parser.c:2188:44: warning: implicit conversion from enumeration type 'ret_code' to different enumeration type 'enum assume_segreg' [-Wenum-conversion]
+            CodeInfo->prefix.RegOverride = EMPTY;
+                                         ~ ^~~~~
+parser.c:2196:48: warning: implicit conversion from enumeration type 'ret_code' to different enumeration type 'enum assume_segreg' [-Wenum-conversion]
+                CodeInfo->prefix.RegOverride = EMPTY;
+                                             ~ ^~~~~
+parser.c:2197:13: warning: add explicit braces to avoid dangling else [-Wdangling-else]
+            else
+            ^
+parser.c:2271:21: warning: 49 enumeration values not handled in switch: 'OP_NONE', 'OP_R8', 'OP_R16'... [-Wswitch]
+            switch( op1 ) {
+                    ^
+parser.c:2286:21: warning: 49 enumeration values not handled in switch: 'OP_NONE', 'OP_R8', 'OP_R16'... [-Wswitch]
+            switch( op2 ) {
+                    ^
+parser.c:2403:15: warning: add explicit braces to avoid dangling else [-Wdangling-else]
+            } else
+              ^
+parser.c:2957:35: warning: implicit conversion from enumeration type 'ret_code' to different enumeration type 'enum assume_segreg' [-Wenum-conversion]
+    CodeInfo.prefix.RegOverride = EMPTY;
+                                ~ ^~~~~
+parser.c:3050:18: warning: enumeration values 'EXPR_CONST', 'EXPR_ADDR', and 'EXPR_REG' not handled in switch [-Wswitch]
+        switch ( opndx[j].kind ) {
+                 ^
+parser.c:3145:59: warning: '&&' within '||' [-Wlogical-op-parentheses]
+                    if ( ( flags & ( OP_XMM | OP_M128 ) ) &&
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+parser.c:3145:59: note: place parentheses around the '&&' expression to silence this warning
+                    if ( ( flags & ( OP_XMM | OP_M128 ) ) &&
+                                                          ^
+parser.c:3147:58: warning: '&&' within '||' [-Wlogical-op-parentheses]
+                        ( flags & ( OP_YMM | OP_M256 ) ) &&
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+parser.c:3147:58: note: place parentheses around the '&&' expression to silence this warning
+                        ( flags & ( OP_YMM | OP_M256 ) ) &&
+                                                         ^
+parser.c:3162:17: warning: enumeration values 'EXPR_EMPTY', 'EXPR_ERROR', and 'EXPR_FLOAT' not handled in switch [-Wswitch]
+        switch( opndx[CurrOpnd].kind ) {
+                ^
+parser.c:3192:54: warning: for loop has empty body [-Wempty-body]
+        for ( ; tokenarray[i].token != T_COMMA; i-- );
+                                                     ^
+parser.c:3192:54: note: put the semicolon on a separate line to silence this warning
+parser.c:3285:22: warning: 986 enumeration values not handled in switch: 'INS_FIRST_1', 'T_JA', 'T_JAE'... [-Wswitch]
+            switch ( CodeInfo.token ) {
+                     ^
+32 warnings generated.
+posndir.c:116:36: warning: add explicit braces to avoid dangling else [-Wdangling-else]
+        if ( StoreState == FALSE ) FStoreLine(0);
+                                   ^
+H/fastpass.h:83:92: note: expanded from macro 'FStoreLine'
+#define FStoreLine( flags ) if ( Parse_Pass == PASS_1 ) StoreLine( CurrSource, flags, 0 ); else
+                                                                                           ^
+posndir.c:238:32: warning: add explicit braces to avoid dangling else [-Wdangling-else]
+    if ( StoreState == FALSE ) FStoreLine(0);
+                               ^
+H/fastpass.h:83:92: note: expanded from macro 'FStoreLine'
+#define FStoreLine( flags ) if ( Parse_Pass == PASS_1 ) StoreLine( CurrSource, flags, 0 ); else
+                                                                                           ^
+2 warnings generated.
+preproc.c:160:39: warning: add explicit braces to avoid dangling else [-Wdangling-else]
+                    if ( StoreState ) FStoreLine( 0 );
+                                      ^
+H/fastpass.h:83:92: note: expanded from macro 'FStoreLine'
+#define FStoreLine( flags ) if ( Parse_Pass == PASS_1 ) StoreLine( CurrSource, flags, 0 ); else
+                                                                                           ^
+1 warning generated.
+proc.c:581:15: warning: add explicit braces to avoid dangling else [-Wdangling-else]
+            } else {
+              ^
+proc.c:704:25: warning: enumeration values 'LANG_C', 'LANG_SYSCALL', and 'LANG_FASTCALL' not handled in switch [-Wswitch]
+                switch( proc->sym.langtype ) {
+                        ^
+proc.c:954:124: warning: for loop has empty body [-Wempty-body]
+            for ( curr = 1, paranode = proc->e.procinfo->paralist; curr < cntParam;paranode = paranode->nextparam, curr++ );
+                                                                                                                           ^
+proc.c:954:124: note: put the semicolon on a separate line to silence this warning
+proc.c:1323:18: warning: 10 enumeration values not handled in switch: 'SYM_UNDEFINED', 'SYM_SEG', 'SYM_GRP'... [-Wswitch]
+        switch ( sym->state ) {
+                 ^
+proc.c:2424:9: warning: add explicit braces to avoid dangling else [-Wdangling-else]
+        else
+        ^
+proc.c:2988:21: warning: enumeration values 'LANG_NONE', 'LANG_C', and 'LANG_SYSCALL' not handled in switch [-Wswitch]
+            switch( CurrProc->sym.langtype ) {
+                    ^
+6 warnings generated.
+In file included from reswords.c:232:
+H/opndcls.h:17:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( M16_M32,  NONE,       NONE  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:36: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~ ^~~~~~~~~~
+<scratch space>:14:1: note: expanded from here
+OP_M16_M32
+^~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:19:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( M16_M64,  NONE,       NONE  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:36: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~ ^~~~~~~~~~
+<scratch space>:17:1: note: expanded from here
+OP_M16_M64
+^~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:32:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( R16_M16,  NONE,       NONE  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:36: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~ ^~~~~~~~~~
+<scratch space>:47:1: note: expanded from here
+OP_R16_M16
+^~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:33:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( R16_R32,  NONE,       NONE  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:36: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~ ^~~~~~~~~~
+<scratch space>:50:1: note: expanded from here
+OP_R16_R32
+^~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:37:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( R64_M64,  NONE,       NONE  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:36: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~ ^~~~~~~~~~
+<scratch space>:59:1: note: expanded from here
+OP_R64_M64
+^~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:38:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( R16_R64,  NONE,       NONE  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:36: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~ ^~~~~~~~~~
+<scratch space>:62:1: note: expanded from here
+OP_R16_R64
+^~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:40:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( R8_M08,   NONE,       NONE  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:36: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~ ^~~~~~~~~~
+<scratch space>:65:1: note: expanded from here
+OP_R8_M08
+^~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:83:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( MMX,      MMX_M64,    NONE  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:48: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~             ^~~~~~~~~~
+<scratch space>:177:1: note: expanded from here
+OP_MMX_M64
+^~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:85:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( MMX,      MMX_M64_08, NONE  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:48: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~             ^~~~~~~~~~
+<scratch space>:180:1: note: expanded from here
+OP_MMX_M64_08
+^~~~~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:86:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( MMX,      MMX_M64_16, NONE  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:48: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~             ^~~~~~~~~~
+<scratch space>:183:1: note: expanded from here
+OP_MMX_M64_16
+^~~~~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:87:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( MMX,      MMX_M64_32, NONE  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:48: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~             ^~~~~~~~~~
+<scratch space>:186:1: note: expanded from here
+OP_MMX_M64_32
+^~~~~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:89:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( MMX,      RMGT16,     NONE  )  /* MOVD, CVTSI2SD, CVTSI2SS */
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:48: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~             ^~~~~~~~~~
+<scratch space>:189:1: note: expanded from here
+OP_RMGT16
+^~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:91:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( MMX,      XMM_M64,    NONE  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:48: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~             ^~~~~~~~~~
+<scratch space>:195:1: note: expanded from here
+OP_XMM_M64
+^~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:92:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( MMX,      XMM_M128,   NONE  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:48: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~             ^~~~~~~~~~
+<scratch space>:198:1: note: expanded from here
+OP_XMM_M128
+^~~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:102:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( R,        R_MS,       NONE  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:48: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~             ^~~~~~~~~~
+<scratch space>:228:1: note: expanded from here
+OP_R_MS
+^~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:103:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( R16_M16,  R16,        NONE  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:36: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~ ^~~~~~~~~~
+<scratch space>:230:1: note: expanded from here
+OP_R16_M16
+^~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:104:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( R16_R32,  I,          NONE  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:36: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~ ^~~~~~~~~~
+<scratch space>:233:1: note: expanded from here
+OP_R16_R32
+^~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:108:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( R64,      R32_M32,    NONE  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:48: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~             ^~~~~~~~~~
+<scratch space>:243:1: note: expanded from here
+OP_R32_M32
+^~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:112:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( RGT16,    R8_M08,     NONE  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:48: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~             ^~~~~~~~~~
+<scratch space>:252:1: note: expanded from here
+OP_R8_M08
+^~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:113:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( RGT16,    RGT8_MS,    NONE  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:48: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~             ^~~~~~~~~~
+<scratch space>:255:1: note: expanded from here
+OP_RGT8_MS
+^~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:119:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( RGT16,    XMM_M32,    NONE  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:48: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~             ^~~~~~~~~~
+<scratch space>:267:1: note: expanded from here
+OP_XMM_M32
+^~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:120:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( RGT16,    XMM_M64,    NONE  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:48: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~             ^~~~~~~~~~
+<scratch space>:270:1: note: expanded from here
+OP_XMM_M64
+^~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:122:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( R32,      R32_M32,    NONE  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:48: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~             ^~~~~~~~~~
+<scratch space>:273:1: note: expanded from here
+OP_R32_M32
+^~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:123:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( R32_M32,  R32,        NONE  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:36: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~ ^~~~~~~~~~
+<scratch space>:275:1: note: expanded from here
+OP_R32_M32
+^~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:126:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( R64,      R64_M64,    NONE  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:48: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~             ^~~~~~~~~~
+<scratch space>:282:1: note: expanded from here
+OP_R64_M64
+^~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:127:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( R64_M64,  R64,        NONE  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:36: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~ ^~~~~~~~~~
+<scratch space>:284:1: note: expanded from here
+OP_R64_M64
+^~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:141:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( RGT8,     RGT8_MS,    NONE  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:48: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~             ^~~~~~~~~~
+<scratch space>:309:1: note: expanded from here
+OP_RGT8_MS
+^~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:142:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( RGT8,     R_MS,       NONE  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:48: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~             ^~~~~~~~~~
+<scratch space>:312:1: note: expanded from here
+OP_R_MS
+^~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:150:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( RMGT16,   MMX,        NONE  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:36: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~ ^~~~~~~~~~
+<scratch space>:317:1: note: expanded from here
+OP_RMGT16
+^~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:151:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( RMGT16,   XMM,        NONE  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:36: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~ ^~~~~~~~~~
+<scratch space>:320:1: note: expanded from here
+OP_RMGT16
+^~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:154:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( R_MS,     CL_ONLY,    NONE  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:36: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~ ^~~~~~~~~~
+<scratch space>:326:1: note: expanded from here
+OP_R_MS
+^~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:155:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( R_MS,     I,          NONE  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:36: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~ ^~~~~~~~~~
+<scratch space>:329:1: note: expanded from here
+OP_R_MS
+^~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:156:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( R_MS,     I8_U,       NONE  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:36: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~ ^~~~~~~~~~
+<scratch space>:332:1: note: expanded from here
+OP_R_MS
+^~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:157:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( R_MS,     I_1,        NONE  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:36: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~ ^~~~~~~~~~
+<scratch space>:335:1: note: expanded from here
+OP_R_MS
+^~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:169:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( XMM,      MMX_M64,    NONE  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:48: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~             ^~~~~~~~~~
+<scratch space>:366:1: note: expanded from here
+OP_MMX_M64
+^~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:170:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( XMM,      RMGT16,     NONE  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:48: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~             ^~~~~~~~~~
+<scratch space>:369:1: note: expanded from here
+OP_RMGT16
+^~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:172:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( XMM,      XMM_M16,    NONE  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:48: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~             ^~~~~~~~~~
+<scratch space>:375:1: note: expanded from here
+OP_XMM_M16
+^~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:173:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( XMM,      XMM_M32,    NONE  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:48: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~             ^~~~~~~~~~
+<scratch space>:378:1: note: expanded from here
+OP_XMM_M32
+^~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:174:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( XMM,      XMM_M64,    NONE  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:48: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~             ^~~~~~~~~~
+<scratch space>:381:1: note: expanded from here
+OP_XMM_M64
+^~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:175:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( XMM,      XMM_M128,   NONE  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:48: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~             ^~~~~~~~~~
+<scratch space>:384:1: note: expanded from here
+OP_XMM_M128
+^~~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:177:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( XMM,      XMM_M128_08, NONE  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:48: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~             ^~~~~~~~~~
+<scratch space>:387:1: note: expanded from here
+OP_XMM_M128_08
+^~~~~~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:178:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( XMM,      XMM_M128_16, NONE  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:48: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~             ^~~~~~~~~~
+<scratch space>:390:1: note: expanded from here
+OP_XMM_M128_16
+^~~~~~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:179:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( XMM,      XMM_M128_32, NONE  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:48: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~             ^~~~~~~~~~
+<scratch space>:393:1: note: expanded from here
+OP_XMM_M128_32
+^~~~~~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:180:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( XMM,      XMM_M128_64, NONE  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:48: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~             ^~~~~~~~~~
+<scratch space>:396:1: note: expanded from here
+OP_XMM_M128_64
+^~~~~~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:183:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( XMM,      YMM_M256,   NONE  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:48: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~             ^~~~~~~~~~
+<scratch space>:399:1: note: expanded from here
+OP_YMM_M256
+^~~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:188:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( YMM,      YMM_M256,   NONE  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:48: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~             ^~~~~~~~~~
+<scratch space>:414:1: note: expanded from here
+OP_YMM_M256
+^~~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:192:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( MMX,      MMX_M64,    I8_U  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:48: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~             ^~~~~~~~~~
+<scratch space>:423:1: note: expanded from here
+OP_MMX_M64
+^~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:195:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( MMX,      R32_M16,    I8_U  ) /* PINSRW */
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:48: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~             ^~~~~~~~~~
+<scratch space>:426:1: note: expanded from here
+OP_R32_M16
+^~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:196:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( R32_M32,  XMM,        I8_U  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:36: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~ ^~~~~~~~~~
+<scratch space>:428:1: note: expanded from here
+OP_R32_M32
+^~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:198:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( R64_M64,  XMM,        I8_U  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:36: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~ ^~~~~~~~~~
+<scratch space>:431:1: note: expanded from here
+OP_R64_M64
+^~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:202:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( RGT16_M08,XMM,        I8_U  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:36: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~ ^~~~~~~~~~
+<scratch space>:4:1: note: expanded from here
+OP_RGT16_M08
+^~~~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:203:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( RGT8,     R_MS,       I     )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:48: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~             ^~~~~~~~~~
+<scratch space>:8:1: note: expanded from here
+OP_R_MS
+^~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:204:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( RGT8,     R_MS,       I8_U  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:48: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~             ^~~~~~~~~~
+<scratch space>:11:1: note: expanded from here
+OP_R_MS
+^~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:205:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( RGT8_MGT8,RGT8,       CL    )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:36: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~ ^~~~~~~~~~
+<scratch space>:13:1: note: expanded from here
+OP_RGT8_MGT8
+^~~~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:206:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( RGT8_MGT8,RGT8,       I8_U  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:36: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~ ^~~~~~~~~~
+<scratch space>:16:1: note: expanded from here
+OP_RGT8_MGT8
+^~~~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:210:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( XMM,      R32_M16,    I8_U  ) /* PINSRW */
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:48: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~             ^~~~~~~~~~
+<scratch space>:23:1: note: expanded from here
+OP_R32_M16
+^~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:211:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( XMM,      R32_M08,    I8_U  ) /* PINSRB */
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:48: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~             ^~~~~~~~~~
+<scratch space>:26:1: note: expanded from here
+OP_R32_M08
+^~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:212:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( XMM,      R32_M32,    I8_U  ) /* PINSRD */
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:48: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~             ^~~~~~~~~~
+<scratch space>:29:1: note: expanded from here
+OP_R32_M32
+^~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:214:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( XMM,      R64_M64,    I8_U  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:48: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~             ^~~~~~~~~~
+<scratch space>:32:1: note: expanded from here
+OP_R64_M64
+^~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:217:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( XMM,      XMM_M32 ,   HID   )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:48: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~             ^~~~~~~~~~
+<scratch space>:38:1: note: expanded from here
+OP_XMM_M32
+^~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:218:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( XMM,      XMM_M64 ,   HID   )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:48: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~             ^~~~~~~~~~
+<scratch space>:41:1: note: expanded from here
+OP_XMM_M64
+^~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:219:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( XMM,      XMM_M128,   HID   )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:48: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~             ^~~~~~~~~~
+<scratch space>:44:1: note: expanded from here
+OP_XMM_M128
+^~~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:220:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( XMM,      XMM_M32 ,   I8_U  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:48: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~             ^~~~~~~~~~
+<scratch space>:47:1: note: expanded from here
+OP_XMM_M32
+^~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:221:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( XMM,      XMM_M64 ,   I8_U  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:48: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~             ^~~~~~~~~~
+<scratch space>:50:1: note: expanded from here
+OP_XMM_M64
+^~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:222:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( XMM,      XMM_M128,   I8_U  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:48: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~             ^~~~~~~~~~
+<scratch space>:53:1: note: expanded from here
+OP_XMM_M128
+^~~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:223:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( XMM,      XMM_M128,   XMM0  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:48: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~             ^~~~~~~~~~
+<scratch space>:56:1: note: expanded from here
+OP_XMM_M128
+^~~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:226:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( XMM,      XMM_M128,   XMM   )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:48: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~             ^~~~~~~~~~
+<scratch space>:62:1: note: expanded from here
+OP_XMM_M128
+^~~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:228:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( YMM,      XMM_M128,   I8_U  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:48: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~             ^~~~~~~~~~
+<scratch space>:68:1: note: expanded from here
+OP_XMM_M128
+^~~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:229:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( YMM,      YMM_M256,   I8_U  )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:48: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~             ^~~~~~~~~~
+<scratch space>:71:1: note: expanded from here
+OP_YMM_M256
+^~~~~~~~~~~
+In file included from reswords.c:232:
+H/opndcls.h:230:1: warning: implicit conversion from enumeration type 'enum operand_sets' to different enumeration type 'enum operand_type' [-Wenum-conversion]
+OpCls( YMM,      YMM_M256,   YMM   )
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reswords.c:231:48: note: expanded from macro 'OpCls'
+#define OpCls( op1, op2, op3 ) { { OP_ ## op1, OP_ ## op2 }, OP3_ ## op3 },
+                                 ~             ^~~~~~~~~~
+<scratch space>:74:1: note: expanded from here
+OP_YMM_M256
+^~~~~~~~~~~
+reswords.c:350:5: warning: implicit conversion from enumeration type 'enum special_token' to different enumeration type 'enum instr_token' [-Wenum-conversion]
+    T_SPL,             /* add x64 register part of special.h */
+    ^~~~~
+reswords.c:351:5: warning: implicit conversion from enumeration type 'enum special_token' to different enumeration type 'enum instr_token' [-Wenum-conversion]
+    T_FRAME,           /* add x64 reserved word part of special.h */
+    ^~~~~~~
+reswords.c:352:5: warning: implicit conversion from enumeration type 'enum special_token' to different enumeration type 'enum instr_token' [-Wenum-conversion]
+    T_DOT_ALLOCSTACK,  /* add x64 directive part of directve.h (win64) */
+    ^~~~~~~~~~~~~~~~
+reswords.c:362:5: warning: implicit conversion from enumeration type 'enum special_token' to different enumeration type 'enum instr_token' [-Wenum-conversion]
+    T_TR3,          /* registers invalid for IA32+              */
+    ^~~~~
+reswords.c:363:5: warning: implicit conversion from enumeration type 'enum special_token' to different enumeration type 'enum instr_token' [-Wenum-conversion]
+    T_DOT_SAFESEH,  /* directives invalid for IA32+             */
+    ^~~~~~~~~~~~~
+75 warnings generated.
+segment.c:1539:44: warning: assigning to 'char *' from 'uint_8 *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+    for( curr = SymTables[TAB_SEG].head, p = ModuleInfo.pCodeBuff; curr; curr = curr->next ) {
+                                           ^ ~~~~~~~~~~~~~~~~~~~~
+segment.c:1548:45: warning: assigning to 'uint_8 *' (aka 'unsigned char *') from 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+                curr->e.seginfo->CodeBuffer = p;
+                                            ^ ~
+2 warnings generated.
+symbols.c:361:13: warning: 5 enumeration values not handled in switch: 'SYM_UNDEFINED', 'SYM_STACK', 'SYM_STRUCT_FIELD'... [-Wswitch]
+    switch( sym->state ) {
+            ^
+1 warning generated.
+trmem.c:774:20: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+    if ( FileTrmem = fopen( TRMEM_LOGFN, "w" ) ) {
+         ~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+trmem.c:774:20: note: place parentheses around the assignment to silence this warning
+    if ( FileTrmem = fopen( TRMEM_LOGFN, "w" ) ) {
+                   ^
+         (                                    )
+trmem.c:774:20: note: use '==' to turn this assignment into an equality comparison
+    if ( FileTrmem = fopen( TRMEM_LOGFN, "w" ) ) {
+                   ^
+                   ==
+1 warning generated.

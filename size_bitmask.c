@@ -4,7 +4,8 @@
 /*                                                                        */
 /*uint32_t positive_mask = size_bitmask(size);                            */
 /*uint32_t negative_mask = size_bitmask(size) ^ 0xFFFFFFFFU;              */
-__int32  size_bitmask(__int32 size) {
+#include <stdint.h>
+uint32_t  size_bitmask(uint32_t size) {
 	//Size should not be Zero
 	//assert(size > 0);
 	//...But if size is Zero, the bitmask is 0xFFFFFFFF
@@ -14,9 +15,9 @@ __int32  size_bitmask(__int32 size) {
 
 	//To generate the mask we set every bit below the first set bit, MSB first.
 
-	__int8 set_bit_index;
+	uint8_t set_bit_index;
 	//Search the first set bit
-	for (__int8 i = 0; i < 32; ++i) {
+	for (uint8_t i = 0; i < 32; ++i) {
 		//For each bit
 		set_bit_index = 31 - i;
 		//If set
@@ -30,7 +31,7 @@ __int32  size_bitmask(__int32 size) {
 	}
 
 	//Now, set every size bit below bit_index to generate the mask
-	for (__int8 i = 0; i < set_bit_index; ++i) {
+	for (uint8_t i = 0; i < set_bit_index; ++i) {
 		size = size | (1 << i);
 	}
 
